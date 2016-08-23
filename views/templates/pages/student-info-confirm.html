@@ -1,0 +1,151 @@
+<div ng-controller="studentInfoConfirmCtrl">
+  <main role="article">
+      <article>
+
+        <header>
+          <h1 class="text--center">Student Information</h1>
+          <p class="text-center">Please confirm your details.</p>
+        </header>
+
+        <hr>
+        <form name="studentInfoForm" ng-init="init()" novalidate>
+          <fieldset>
+            <div class="row">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-9">
+
+                <div class="row">
+                  <div class="col-sm-6">
+                      <label>First Name:</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <% data.first_name %>
+                   </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>Last Name:</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <% data.last_name %>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>Address:</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <% data.street %>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>City:</label>
+                  </div>
+                 <div class="col-sm-6">
+                    <% data.city %>
+                 </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>State:</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <% data.state %>
+                  </div>
+                </div>
+
+                <div class="row">
+                   <div class="col-sm-6">
+                      <label>Zip:</label>
+                  </div>
+                  <div class="col-sm-6">
+                      <% data.zipcode %>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>Date of Birth: MM/DD/YYYY</label>
+                  </div>
+                  <div class="col-sm-6">
+                      <% data.birthdate %>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                      <label for="court">Issuing Court:</label>
+                  </div>
+                  <div class="col-sm-6">
+                      <% data.ticket_court %>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                      <label for="citation-number">
+                        Citation/Case/Docket Number:
+                      </label>
+                  </div>
+                    <div class="col-sm-6">
+                      <% data.ticket_number %>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                     <label>Driver License #:</label>
+                  </div>
+                  <div class="col-sm-6">
+                     <% data.dl_number %>
+                  </div>
+                </div>
+
+                <div class="row">
+                   <div class="col-sm-6">
+                      <label>Driver License Type:</label>
+                   </div>
+                   <div class="col-sm-6">
+                      <% data.dl_type %>
+                   </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>State of Issuance:</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <% data.dl_state %>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>Traffic School Due Date:</label>
+                  </div>
+                  <div class="col-sm-6">
+                     <% data.ticket_due_date %>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <button ng-click="Edit()" class="btn primary wider">Edit</button>
+                    <button ng-click="Continue()" class="btn primary wider">Continue</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+      </article>
+    </main>
+
+</div>

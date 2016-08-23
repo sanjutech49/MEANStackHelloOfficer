@@ -1,0 +1,203 @@
+.btn {
+  border-radius: 4px;
+  font-family: $font_stack;
+  font-weight: $font_light;
+  line-height: $line_height;
+  transition: all .3s ease;
+  min-width: 5rem;
+  margin-bottom: 10px;
+  box-shadow: $button_shadow;
+
+
+  &:active, &:focus {
+    box-shadow: none;
+    outline: none !important;
+  }
+  &.block {
+    width: 100%;
+  }
+  &.default {
+    @include button-variant(#333, #fff, #ccc);
+    &:hover {
+      color: $white;
+      background-color: $brand_primary !important;
+      border-color: $brand_primary !important;
+    }
+    &:active, &:focus  {
+      background-color: $brand_primary;
+      border-color: $brand_primary;
+      color: $white;
+    }
+  }
+  &.primary {
+    @include button-variant($white, $brand_primary, $brand_primary);
+    &:hover {
+      color: $brand_primary;
+      background-color: $white;
+      border-color: $brand_primary;
+    }
+    &:active, &:focus  {
+      color: $white;
+      background-color: $brand_primary !important;
+      border-color: $brand_primary !important;
+    }
+  }
+  &.primary--inverted {
+    @include button-variant($brand_primary, $white, $brand_primary);
+    &:hover {
+      color: $white !important;
+      background-color: $brand_primary !important;
+      border-color: $brand_primary !important;
+    }
+    &:active, &:focus  {
+      color: $white;
+      background-color: $brand_primary !important;
+      border-color: $brand_primary !important;
+    }
+  }
+  &.small {
+    box-shadow: $button_shadow;
+    font-size: $font_small;
+    padding: 1.25rem;
+  }
+  &.base {
+    box-shadow: $button_shadow;
+    font-size: $font_base;
+    padding: .65rem 4rem;
+  }
+  &.medium {
+    box-shadow: $button_shadow;
+    font-size: $font_medium;
+    padding: 1.25rem;
+  }
+  &.large {
+    box-shadow: $button_shadow;
+    font-size: $font_medium;
+    padding: 1.25rem;
+  }
+  &.wider {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  &.widest {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+}
+
+a.btn, .hero.bluewave a.btn {
+  text-decoration: none !important;
+}
+
+.btn-group {
+  .btn {
+    min-width: 65px;
+    &:hover {
+      color: $brand_primary;
+      background-color: $white;
+      border-color: $brand_primary;
+    }
+  }
+  .btn.active {
+    background-color: $brand_primary;
+    border-color: $brand_primary;
+    color: $white;
+  }
+}
+
+
+
+
+.hamburger {
+    width: 50px;
+    height: 45px;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    outline: 0;
+
+    span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: $brand_primary;
+      border-radius: 2px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+      &:nth-child(1) {
+        top: 25%;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 50%;
+      }
+      &:nth-child(4) {
+        top: 75%;
+      }
+    }
+    &.close {
+      opacity: .7;
+      &:hover {
+        opacity: 1;
+        //text-shadow: $text_shadow_md;
+      }
+      span {
+          background: $brand_primary;
+          &:nth-child(1) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+          }
+          &:nth-child(2) {
+            transform: rotate(45deg);
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+          }
+          &:nth-child(4) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+          }
+      }
+    }
+}
+
+
+
+button.round {
+    position: fixed;
+    z-index: 100;
+    top: 110px;
+    right: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    border: 0;
+    background-color: $brand_primary;
+    color: #fff;
+    font-size: 48px;
+    box-shadow: $button_shadow;
+    &:hover, &:active {
+      box-shadow: inherit;
+    }
+    &:focus {
+      outline: none;
+    }
+}
+
+@media screen and (max-width: $xs_viewport) {
+  button.round {
+    top: 110px;
+    height: 60px;
+    width: 60px;
+    font-size: 28px;
+  }
+}

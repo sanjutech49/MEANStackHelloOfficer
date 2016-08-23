@@ -1,0 +1,60 @@
+<header>
+<div class="navbar navbar-default navbar-fnt navbar-backgrnd" ng-controller="adminHeaderCtrl">
+    <div class="navbar-header">
+        <div class="collapse navbar-collapse">
+             <h1>Hello Officer Admin Panel</h1>
+        </div>
+    </div>
+    <div class="navbar-header pull-right">
+        <div class="collapse navbar-collapse">
+           <h1>
+            <a href="/admin/logout" class="btn btn-info" ng-show="admin">
+                Logout
+           </a>
+           <a href="/admin/login" class="btn btn-info" ng-show="!admin">
+                Login
+           </a>
+           </h1>
+        </div>
+    </div>
+    <div class="navbar-header pull-right">
+        <div class="collapse navbar-collapse">
+           <h1>
+            <a href="#" onclick="window.location.href='/'" class="btn btn-info">
+                Go To Site
+           </a>
+           </h1>
+        </div>
+    </div>
+    <div class="navbar-header pull-right" ng-show="username">
+        <div class="collapse navbar-collapse">
+           <h1>
+            <a href="#" class="btn btn-info">
+               Hi <% username %>
+           </a>
+           </h1>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+</header>
+
+<div id="home">
+  <div class="row">
+      <div class="col-sm-4"></div>
+       <div class="col-sm-4 signupform" style="background:#f8f8f8">
+            <div style="text-align:center"><h2>Admin Menu</h2></div>
+             <ul>  
+                 <li> 
+                    <h4><a  href="/admin/quiz">Go To Quiz</a></h4>
+                 </li>
+                 <li>
+                   <h4><a  href="/admin/users"> Go To Users </a></h4>
+                 </li>
+                  <li>
+                   <h4><a  href="/admin/coupons"> Go To Coupons </a></h4>
+                 </li>   	 
+             </ul>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.m-brand {
+	@include clearfix;
+	img {
+		@extend .pull-left;
+		width: 60px;
+	}
+	h1, span {
+		font-size: $font_large - 10;
+		font-weight: $font_light;
+		color: $brand_primary;
+		margin: 10px;
+		display: inline-block;
+		text-shadow: $text_shadow;
+	}
+}

@@ -1,0 +1,155 @@
+{{>admin-header}}
+<div class="container">
+  <div id="users">
+    <main>
+      <header>
+        <h1>Users</h1>
+      </header>
+    </main>
+
+      <div class="row">
+        <form>
+          <div class="col-sm-6">
+             <input type="text"placeholder="Search" class="form-control" ng-model="keyword" nt-focus>
+          </div>
+          <div class="col-sm-1">
+            <button type="submit" class="btn btn-info btn-sm" ng-click="Search()">
+              <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+          </div>
+        </form>
+           <div class="col-sm-1">
+              <button ng-click="Back()" class="btn btn-info btn-sm">All Users</button>
+          </div>
+
+      </div>
+      <br/>
+
+      <div ng-show="displayAllusers">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Sr no</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Paid/Unpaid</th>
+                <th>Is Admin </th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="user in users">
+              <tr ng-show="recordNo[$index]">
+                  <td><% $index+1 %></td>
+                  <td><% user.first_name %></td>
+                  <td><% user.last_name %></td>
+                  <td><% user.email %></td>
+                  <td><% user.status %></td>
+                  <td><% user.final_exam %></td>
+                  <td><% user.admin %></td>
+                  <td> 
+                     <button ng-click="EditUser(user._id)" class="btn btn-default">
+                        Edit
+                     </button>  
+                     <button ng-click="DeleteUser(user._id)" class="btn btn-default">
+                        Delete
+                     </button>
+                     <button ng-click="GoForDetails(user._id)" class="btn btn-default">
+                        Details
+                    </button>
+                  </td>
+             </tr>   
+            </tbody>
+          </table>
+
+         <div>
+            <ul class="pagination pagination-lg" ng-repeat="chunk in chunks">
+               <li>
+                 <a href="javascript:void(0)" ng-click="goToPageNo(chunk)">
+                   <% chunk+1 %>
+                 </a>
+              </li>
+           </ul>
+        </div>
+
+      </div>
+
+      <div ng-show="displayUserArea">
+
+          <div class="row">
+             <div class="col-sm-2">
+               <label for="firstname">First Name:</label>
+             </div>
+             <div class="col-sm-6">
+              <input ng-model="user.first_name" type="text" id="firstname" value="" placeholder="First Name" class="form-control" required>
+             </div>
+          </div>
+          <br/>
+
+          <div class="row">
+            <div class="col-sm-2">
+               <label for="lastname">Last Name:</label>
+            </div>
+            <div class="col-sm-6">
+                <input ng-model="user.last_name" type="text" id="lastname" value="" placeholder="Last Name" class="form-control" required>
+            </div>
+          </div>
+           <br/>
+
+          <div class="row">
+            <div class="col-sm-2">
+               <label for="email">Email Address:</label>
+            </div>
+            <div class="col-sm-6">
+               <input ng-model="user.email" type="email"placeholder="Email Address" class="form-control" required id="email">
+            </div>
+          </div>
+           <br/>
+
+          <div class="row">
+            <div class="col-sm-2">
+                 <label for="status">User Status:</label>
+            </div>
+            <div class="col-sm-6">
+              <input ng-model="user.status" type="text"placeholder="User Status"  class="form-control" required id="status">
+            </div>
+          </div>
+           <br/>
+
+          <div class="row">
+            <div class="col-sm-2">
+                <label for="payStatus">Paid/Unpaid:</label>
+            </div>
+            <div class="col-sm-6"> 
+               <input ng-model="user.final_exam" type="text"placeholder="Pay Status" class="form-control" required id="payStatus">
+            </div>
+          </div>
+           <br/>
+
+           <div class="row">
+            <div class="col-sm-2">
+                <label for="admin">Is Admin:</label>
+            </div>
+            <div class="col-sm-6"> 
+                <select ng-model="user.admin" id="admin">
+                     <option value="true">True</option>
+                     <option value="false">False</option>
+               </select> 
+            </div>
+          </div>
+           <br/>
+
+
+          <div class="buttons">
+               <button ng-click="Back()">Back</button>
+               <button ng-click="Update(user._id)">Update</button>
+          </div>
+
+      </div>
+
+
+
+
+  </div>
+</div>

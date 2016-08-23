@@ -1,0 +1,15 @@
+.course-eval {
+  input[type="text"]{
+    @extend .form-control;
+  }
+  .radio {
+    display: inline-block;
+    margin-right: 15px;
+    input[type="radio"] {
+      margin-top: 8px;
+    }
+  }
+  button {
+    @extend .btn, .btn-primary, .btn-lg;
+  }
+}

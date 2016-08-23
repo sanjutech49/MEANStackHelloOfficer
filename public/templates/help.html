@@ -1,0 +1,102 @@
+<nav ng-controller="headerCtrl" class="navbar default navbar-fixed-top">
+  <div class="navbar__inset">
+    <div class="container-fluid">
+      <div class="navbar__header"><!-- /.nav__header optional -->
+        <button id="menu-toggle" type="button" class="hamburger hidden-md hidden-lg" aria-controls="navbar">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a class="navbar__brand default" href="#"><span class="brand__text">Hello<span class="text--heavy">Officer</span></span></a>
+      </div><!-- /.navbar__header -->
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li rolse="presentation"><a href="/" ui-sref-active="active">Home</a></li>
+            <li rolse="presentation"><a href="/how-it-works" ui-sref-active="active">How It Works</a></li>
+            <li rolse="presentation"><a href="/frequently-asked-questions" ui-sref-active="active">FAQ</a></li>
+            <li rolse="presentation"><a href="/contact" ui-sref-active="active">Contact</a></li>
+          </ul>
+          <p class="navbar-text pull-right text--primary text--light">Coming Soon</p>
+<!--           <ul  ng-show="!user" class="nav navbar-nav navbar-right">
+            <li><a href="/get-started" ui-sref-active="active">Get Started</a></li>
+            <li><a href="/login" ui-sref-active="active">Login</a></li>
+            <li><a href="/help" ui-sref-active="active">Help</a></li>
+          </ul>
+          <ul  ng-show="user" class="nav navbar-nav navbar-right">
+            <li><a ui-sref-active="active" style="text-transform: capitalize" href="/myprofile"><% userName %></a></li>
+            <li><a href="/login" ui-sref-active="active">Go To Class</a></li>
+            <li><a href="/logout" ui-sref-active="active">Logout</a></li>
+            <li><a href="/help" ui-sref-active="active">Help</a></li>
+          </ul> -->
+        </div>
+    </div><!-- /.container -->
+  </div><!-- /.navbar__inset -->
+  <div class="container-fluid nav__info text-center">
+    <div class="row">
+      <div class="col-xs-6">
+        <span class="text--light">DMV License: E0849</span>
+      </div>
+      <div class="col-xs-6 border__left--primary">
+        <span class="text--light"><span class="hidden-xs">Phone Number: </span>(888) 417-5314</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main role="article">
+  <article role="list">
+
+    <div class="container padding__top--50 padding__bottom--50">
+      <div class="row">
+        <div class="col-md-12">
+
+          <header>
+            <h1 class="text-center">Help</h1>
+          </header>
+
+          <hr>
+
+          <div class="row padding__top--50 padding__bottom--50">
+            <div class="col-md-6 col-md-offset-3 text-center">
+
+              <a href="/verify-account" class="btn primary wider">Correct an Existing Certificate</a>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+<footer role="contentinfo" class="footer">
+  <nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <p class="text-muted text__mobile--center">© HelloOfficer, All Rights Reserved 2016</p>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <ul class="nav navbar-nav">
+            <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
+            <li><a href="/privacy-agreement">Privacy Agreement</a></li>
+            <li><a href="/frequently-asked-questions">FAQ</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="https://www.facebook.com/" title="Connect with Hello Officer Traffic School on Facebook" target="new"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+            <li><a href="http://www.pinterest.com/" title="Connect with Hello Officer Traffic School on Pinterest" target="new"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
+            <li><a href="http://instagram.com/" title="Connect with Hello Officer Traffic School on Instagram" target="new"><i class="fa fa-instagram fa-2x"></i></a></li>
+            <li><a href="https://twitter.com/" title="Connect with Hello Officer Traffic School on Twitter" target="new"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+            <li><a href="http://tumblr.com" title="Connect with Hello Officer Traffic School on Tumblr" target="new"><i class="fa fa-tumblr-square fa-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</footer>

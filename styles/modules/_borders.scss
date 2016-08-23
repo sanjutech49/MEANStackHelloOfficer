@@ -1,0 +1,9 @@
+.border {
+
+  &__right--primary {
+    border-right: lighten($brand_primary, 10%);
+  }
+  &__left--primary {
+    border-left: lighten($brand_primary, 10%);
+  }
+}

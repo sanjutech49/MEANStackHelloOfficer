@@ -1,0 +1,177 @@
+<nav ng-controller="headerCtrl" class="navbar default navbar-fixed-top">
+  <div class="navbar__inset">
+    <div class="container-fluid">
+      <div class="navbar__header"><!-- /.nav__header optional -->
+        <button id="menu-toggle" type="button" class="hamburger hidden-md hidden-lg" aria-controls="navbar">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a class="navbar__brand default" href="#"><span class="brand__text">Hello<span class="text--heavy">Officer</span></span></a>
+      </div><!-- /.navbar__header -->
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li rolse="presentation"><a href="/" ui-sref-active="active">Home</a></li>
+            <li rolse="presentation"><a href="/how-it-works" ui-sref-active="active">How It Works</a></li>
+            <li rolse="presentation"><a href="/frequently-asked-questions" ui-sref-active="active">FAQ</a></li>
+            <li rolse="presentation"><a href="/contact" ui-sref-active="active">Contact</a></li>
+          </ul>
+          <p class="navbar-text pull-right text--primary text--light">Coming Soon</p>
+<!--           <ul  ng-show="!user" class="nav navbar-nav navbar-right">
+            <li><a href="/get-started" ui-sref-active="active">Get Started</a></li>
+            <li><a href="/login" ui-sref-active="active">Login</a></li>
+            <li><a href="/help" ui-sref-active="active">Help</a></li>
+          </ul>
+          <ul  ng-show="user" class="nav navbar-nav navbar-right">
+            <li><a ui-sref-active="active" style="text-transform: capitalize" href="/myprofile"><% userName %></a></li>
+            <li><a href="/login" ui-sref-active="active">Go To Class</a></li>
+            <li><a href="/logout" ui-sref-active="active">Logout</a></li>
+            <li><a href="/help" ui-sref-active="active">Help</a></li>
+          </ul> -->
+        </div>
+    </div><!-- /.container -->
+  </div><!-- /.navbar__inset -->
+  <div class="container-fluid nav__info text-center">
+    <div class="row">
+      <div class="col-xs-6">
+        <span class="text--light">DMV License: E0849</span>
+      </div>
+      <div class="col-xs-6 border__left--primary">
+        <span class="text--light"><span class="hidden-xs">Phone Number: </span>(888) 417-5314</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main role="article">
+  <article role="list">
+
+    <div class="container padding__top--50 padding__bottom--50">
+      <div class="row">
+        <div class="col-md-12">
+
+          <header>
+            <h1 class="text--center">Frequently Asked Questions</h1>
+            <hr>
+          </header>
+
+          <div class="section faq">
+            <div class="faq_question">
+                <h3>Why should I take a traffic school course?</h3>
+                <p>Taking this course is an excellent idea.  Check with your court to see if your ticket qualifies! If it does, you are in luck!  Because now you can take a simple course and avoid a point on your driving record.  Points will hike up your insurance rates and even cause some insurance companies to drop you if you have too many on your record. So if you can avoid them, you should do it.    </p>
+            </div>
+            <div class="faq_question">
+                <h3>Who qualifies to enroll in traffic school?</h3>
+                 <p>
+                    If you have not taken traffic school for any moving violation in the past 18 months and your ticket qualifies, then you can take it. The 18 months is calculated from the date you got your last citation and not the date you took your last traffic school.  You cannot take traffic school if you have gotten a DUI, or if your violation was considered a misdemeanor.  Please check your courtesy notice received from the DMV to make sure your ticket is traffic school eligible.
+                </p>
+                <p>
+                   As of 2013, commercial drivers who were driving a non-commercial vehicle at the time of their ticket are able to take a traffic school course in order to avoid a point toward negligent operator status (NOTS).  For commercial drivers, the violation will not be deleted from your driving record, and can still be available to insurance companies or employers.  If you are a commercial driver and your violation is considered serious, taking traffic school will not help you avoid a point at all.  Serious violations include misdemeanors, alcohol related violations and any offense that requires a mandatory court appearance.
+                </p>
+            </div>
+            <div class="faq_question">
+                <h3>Can I take Traffic School if I got a DUI?</h3>
+                <p>While you certainly may take the course if you have a DUI, it will do nothing to lessen the impact on your driving record. Check with the court to find out what you need to do for a DUI.  </p>
+            </div>
+            <div class="faq_question">
+                <h3>How much is this traffic school?</h3>
+                <p>Our course is only $19.95! For courts that do not accept electronic filing, we will add a small shipping & handling fee.    </p>
+            </div>
+            <div class="faq_question">
+                <h3>What can I expect from this course?</h3>
+                <p>It is super easy. Please see our section on “How it Works.” Everything is explained in detail there.    </p>
+            </div>
+            <div class="faq_question">
+                <h3>But I thought I already paid the court for traffic school.  Why do I need to pay again?</h3>
+                <p>The fee you paid to the court was the fine for your violation. The fee you pay here is for the traffic school itself.   </p>
+            </div>
+            <div class="faq_question">
+                <h3>By when do I have to finish this course to avoid a point on my record?</h3>
+                <p>The date you pass the exam and receive your completion receipt is the date you are finished with traffic school.   So finish this course before 12am on the day your traffic school certificate is due. The courts can be pretty strict with this, so make sure it is done before midnight. </p>
+            </div>
+            <div class="faq_question">
+                <h3>How fast do you process certificates?</h3>
+                <p>We submit our student’s certificates to the court daily! If you have completed the course and received your completion receipt before 3pm, your certificate will be submitted same-day.* If you complete your course and receive your completion receipt after 3pm, your certificate will be submitted the following business day. But don’t fear – if you finish the course and receive your completion receipt before midnight on the due date, you will have satisfied the court requirement, even if the certificate is sent to the court the next business day.    </p>
+                <p><em>*Applies to courses completed before 3pm Monday – Friday. All other certificates will be sent on the following business day.</em></p>
+            </div>
+            <div class="faq_question">
+                <h3>How long does it take to finish the course?</h3>
+                <p>That depends on you.  Some people take hours and some people take days. There are no timers for California traffic schools, so you can move on to the next session as soon as you have passed each chapter quiz.  You are in control of how long it takes.  </p>
+            </div>
+            <div class="faq_question">
+                <h3>What if I can’t finish on time?</h3>
+                <p>If you feel like you’re cutting it really close to the due date, then you should call your court to request an extension.  Most tickets are eligible for a one time extension, so make use of it if needed.     </p>
+            </div>
+            <div class="faq_question">
+                <h3>Can a minor under 18 take this course?</h3>
+                <p>Different courts have different rules about this.  If you are a minor, call your court directly and make sure you can take the course.  </p>
+            </div>
+            <div class="faq_question">
+                <h3>How long does it take for the final exam to be graded?</h3>
+                <p>The final exam is graded immediately after you finish it.   </p>
+            </div>
+            <div class="faq_question">
+                <h3>Who submits the certificate to the court?</h3>
+                <p>We do.  Certificates are submitted electronically to the court and DMV. You don’t have to hassle with this – we’ll take care of it for you! </p>
+            </div>
+            <div class="faq_question">
+                <h3>How many times can I log in and out of the course?</h3>
+                <p>As many times as you like, over as long of a period as you need.    </p>
+            </div>
+            <div class="faq_question">
+                <h3>Is this website secure?</h3>
+                <p>Absolutely!  All of your personal and credit card information is strictly confidential and our site is completely secure.   </p>
+            </div>
+            <div class="faq_question">
+                <h3>Do I need to pay up front for the program or may I pay later?</h3>
+                <p>Take the course for free as many times as you need. You don’t have to pay us until you’re ready to take the test.   </p>
+            </div>
+            <div class="faq_question">
+                <h3>What happens if I find out that I submitted my certificate to the wrong court?</h3>
+                <p>We can correct that for you! Call or email us as soon as you discover the mistake. If we haven’t already submitted the certificate, we can make that change very easily. However, if we have already submitted the certificate to the wrong court, there will be a $14.95 resubmission fee. Be sure to double check your citation to be sure you have entered all of the information correctly. </p>
+            </div>
+            <div class="faq_question">
+                <h3>How many times can I retake the final exam?</h3>
+                <p>You are allowed to take the exam twice.  The exam will consist of different questions the second time around.  If you do not pass the second time, you will be able to re-enroll in the course, take the course again and retake the test two more times.  The California DMV has set up these rules for the test, so all traffic schools have to abide by them. The test is open-book, however, so you shouldn’t have any trouble passing it!  </p>
+            </div>
+             <div class="faq_question">
+              <h3>What do I do if I can’t remember any of my answers to the security questions?</h3>
+              <p>If you have forgotten all of your answers to the security questions, please call us at the number listed on our contact page. We will verify your identification over the phone and will then reset all of the questions. The next time you log in, you will need to answer those questions once again before resuming your place in the curriculum. Obviously this can cause unnecessary delays that could cause you to miss your deadline, so please be sure to remember your answers!!  </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+<footer role="contentinfo" class="footer">
+  <nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <p class="text-muted text__mobile--center">© HelloOfficer, All Rights Reserved 2016</p>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <ul class="nav navbar-nav">
+            <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
+            <li><a href="/privacy-agreement">Privacy Agreement</a></li>
+            <li><a href="/frequently-asked-questions">FAQ</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="https://www.facebook.com/" title="Connect with Hello Officer Traffic School on Facebook" target="new"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+            <li><a href="http://www.pinterest.com/" title="Connect with Hello Officer Traffic School on Pinterest" target="new"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
+            <li><a href="http://instagram.com/" title="Connect with Hello Officer Traffic School on Instagram" target="new"><i class="fa fa-instagram fa-2x"></i></a></li>
+            <li><a href="https://twitter.com/" title="Connect with Hello Officer Traffic School on Twitter" target="new"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+            <li><a href="http://tumblr.com" title="Connect with Hello Officer Traffic School on Tumblr" target="new"><i class="fa fa-tumblr-square fa-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</footer>

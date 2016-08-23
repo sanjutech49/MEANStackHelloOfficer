@@ -1,0 +1,24 @@
+{
+  "title":      "Driver Distractions",
+  "section":    "Section IX",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "These are the three primary categories of being distracted:",
+      "answer":   "a",
+      "explaination": "The correct answer is a. The three categories of being distracted do not include oral distraction."
+    },
+    {
+      "_id":      2,
+      "question": "An example of being distracted while driving is:",
+      "answer":   "d",
+      "explaination": "The correct answer is d. All of these activities while driving are distracting and prevent you from putting your undivided attention where it belongs: on the road."
+    },
+    {
+      "_id":      3,
+      "question": "A person shall not drive a motor vehicle while using an electronic wireless communications device to write, send, or read a text, unless it is being used while the car is stuck in traffic or behind a stop light.",
+      "answer":   false,
+      "explaination": "The correct answer is b.  The law states that a person should never use an electronic wireless communication device while driving in any situation, even if the car is temporarily stopped in traffic or behind a light."
+    }
+  ]
+}

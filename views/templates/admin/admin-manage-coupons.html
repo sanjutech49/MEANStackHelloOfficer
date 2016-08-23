@@ -1,0 +1,129 @@
+{{>admin-header}}
+
+<div class="container">
+  <div id="users">
+    <main>
+      <header>
+        <div class="row">
+          <div class="col-sm-11"><h1>Coupons</h1></div>
+          <div class="col-sm-1">
+            <h1>
+               <button class="btn btn-info" title="Create Coupon" ng-click="DisplayCreateCoupenArea()"  ng-show="DisplayCouponArea">
+                  <i class="glyphicon glyphicon-plus"></i>
+               </button>
+               <button class="btn btn-info" title="Back" ng-click="ListCoupen()"  ng-show="createNewCouponArea">
+                  <i class="glyphicon glyphicon-menu-left"></i>
+               </button>
+            </h1>
+          </div>
+        </div>
+      </header>
+    </main>
+    <div ng-show="DisplayCouponArea">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Sr no</th>
+                <th>Coupon code</th>
+                <th>Coupon amount</th>
+                <th>Valid till</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="coupon in coupons" ng-if="coupons.length">
+                  <td><% $index+1 %></td>
+                  <td><% coupon.coupon_code %></td>
+                  <td><% coupon.coupon_amt %></td>
+                  <td><% coupon.valid_till %></td>
+                  <td>  
+                     <button ng-click="DeleteCoupon(coupon._id)" class="btn btn-default">
+                        Delete
+                    </button>
+                  </td>
+             </tr>   
+
+             <tr ng-show="!coupons.length">
+                 <td colspan="6" style="text-align:center">Empty</td>
+             </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div ng-show="createNewCouponArea">
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+        <form name="createCoupon" ng-submit="CreateCoupon()">
+      
+
+        <div class="row form-group">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+               <label for="coupon_code">Coupon code</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" ng-model="couponData.coupon_code" class="form-control" id="coupon_code" required/>
+            </div>
+        </div>
+
+         <div class="row form-group">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+               <label for="coupon_amt">Coupon amount</label>
+            </div>
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="text" ng-model="couponData.coupon_amt" class="form-control" id="coupon_amt" aria-label="Amount (to the nearest dollar)" required>
+                    <span class="input-group-addon">.00</span>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div class="row form-group">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+               <label>Coupon Validity</label>
+            </div>
+            <div class="col-sm-6">
+               <div>
+                    <select ng-model="month" style="width:33%;float:left" required>
+                        <option value="" disabled="">Month:</option>
+                        <option ng-repeat="month in genrateMonth" value="<% month %>">
+                            <% month %>
+                        </option>
+                    </select>
+                    <select ng-model="day" style="width:33%;float:left" required>
+                        <option value="" disabled="">Day:</option>
+                        <option ng-repeat="day in genrateDays" value="<% day %>">
+                            <% day %>
+                        </option>
+                    </select>
+                    <select ng-model="year" style="width:34%;float:left" required>
+                       <option value="" disabled="">Year:</option>
+                       <option ng-repeat="year in GenrateYears" value="<% year %>">
+                            <% year %>
+                       </option>
+                    </select>
+                  </div>
+            </div>
+        </div>
+      
+        <div class="row form-group">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                 <button type="submit" class="btn btn-info"> 
+                     Create
+                 </button>
+            </div>
+       </div>
+       </form>
+       </div>
+     </div>
+
+    </div>
+  </div>
+</div>

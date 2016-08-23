@@ -1,0 +1,72 @@
+{{>header}}
+<main role="article">
+  <article role="list">
+
+    <div class="container padding__top--50 padding__bottom--50">
+      <div class="row">
+        <div class="col-md-12">
+
+          <header>
+            <h1 class="text-center">Verify Your Account</h1>
+          </header>
+
+          <hr>
+
+          <div class="row padding__top--50 padding__bottom--50">
+            <div class="col-md-4 col-md-offset-4 text-center">
+
+              <form name="verifyAccountForm" ng-submit="submit()">
+                <div class="form__group--12">
+                  <label for="dln" class="sr-only">Driver License #:</label>
+                  <input id="dln" ng-model="user.dl_number" type="text" placeholder="Driver License #" required>
+                </div>
+                <div class="form__group--12">
+                  <span class="text--center">
+                    Enter Date of Birth
+                  </span>
+                </div>
+                <div class="form__group--4">
+                  <label for="dobmonth" class="sr-only">Enter Date of Birth Month:
+                  </label>
+                  <select id="dobmonth" ng-model="user.month" ng-options="month for month in genrateMonth"  required>
+                        <option value="" disabled="">Month:</option>
+                        <option ng-repeat="month in genrateMonth" value="<% month %>">
+                            <% month %>
+                        </option>
+                  </select>
+                </div>
+                <div class="form__group--4">
+                  <label for="dobday" class="sr-only">Enter Date of Birth Day:
+                  </label>
+                  <select id="dobday" ng-model="user.day" ng-options="day for day in genrateDays" required>
+                        <option value="" disabled="">Day:</option>
+                        <option ng-repeat="day in genrateDays" value="<% day %>">
+                            <% day %>
+                        </option>
+                    </select>
+                  
+                </div>
+                <div class="form__group--4">
+                  <label for="dobyear" class="sr-only">Enter Date of Birth:</label>
+                  <select id="dobyear" ng-model="user.year" ng-options="year for year in GenrateYears" required>
+                       <option value="" disabled="">Year:</option>
+                        <option ng-repeat="year in GenrateYears" value="<% year %>">
+                            <% year %>
+                        </option>
+                    </select>  
+                </div>
+                <div class="form__group--4">
+                  <button  class="btn primary wider">Continue</button>
+                </div>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+{{>footer}}

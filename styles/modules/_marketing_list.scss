@@ -1,0 +1,38 @@
+.marketing_list {
+  text-align: center;
+  transition: all 0.3s ease;
+  padding: 20px;
+  border: 1px solid $light_gray;
+  margin-bottom: 20px;
+
+  &:hover {
+    box-shadow: $box_shadow;
+    transform: scale(1.1);
+  }
+
+  i.fa, h4 {
+    text-shadow: $text_shadow;
+    color: $brand_primary_dark;
+  }
+  i.fa {
+    font-size: $font_xlarge;
+  }
+  h4 {
+    font-size: $font_medium;
+    font-weight: $font_light;
+  }
+}
+
+@media screen and (min-width: $sm_viewport) {
+  .marketing_list {
+    min-height: 280px;
+  }
+}
+
+@media screen and (min-width: $md_viewport) {
+  .marketing_list {
+    .info {
+      min-height: 128px;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+<style type="text/css">
+  .table {
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+}
+.masthead {
+    font-size: 12px;
+}
+.m-brand span {
+    color: #337ab7;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 200;
+    margin: 10px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+strong{
+  font-weight: bold;
+}
+</style>
+  <div class="row">
+   <table class="table masthead">
+      <tr>
+              <td style="width:55%">
+                <div class="m-brand">
+                  <img src="{{myhost}}/images/logo.png" alt="Hello Officer Logo">
+                  <span>Hello<strong>Officer</strong></span>
+                </div>
+              </td>
+              <td>
+                <address>
+                  <span class="primary base"><strong>Hello Officer, LLC</strong></span><br>
+                  <span class="address">3746 Vinton Avenue #1 </span><br>
+                  <span class="city">Los Angeles</span>,
+                  <span class="state">CA</span>
+                  <span class="zip">90034</span><br>
+                  <span class="tel">(213) 446-4038</span><br>
+                  <span class="email"><a href="mailto:helloofficertrafficschool@gmail.com">helloofficertrafficschool@gmail.com</a></span><br>
+                  <span class="cert-num"><strong>Certificate #:</strong> {{ user.certificateNo }}</span><br>
+                  <span class="hours"><em><strong>Hours of Operation:</strong> Monday – Friday, 8:00AM -4:30 PM</em></span>
+                </address>
+              </td>
+            </tr>
+          </table>
+  </div>
+  <div class="row">
+          <h1 style="text-align: center">Completion Receipt</h1>
+          <hr>
+          <p>Congratulations, {{ user.name }}! You have successfully completed the HelloOfficer.com traffic violator school course. Below are the details you provided z your traffic violation. We will be sending your Certificate of Completion to the court on your behalf ASAP, so take a minute to confirm everything is correct. Call us at the number above immediately if any changes are needed. Thanks so much for choosing us!</p>
+
+            <table class="table cert_info">
+              <tbody>
+                <tr>
+                  <td><strong>Student Name:</strong></td>
+                  <td>{{ user.name }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Student Address:</strong></td>
+                  <td>{{ user.addr }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Date of Birth:</strong></td>
+                  <td>{{ user.dob }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Issuing Court:</strong></td>
+                  <td>{{ user.issueCourt }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Citation/Case/Docket Number:</strong></td>
+                  <td>{{ user.citation }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Driver's License Number:</strong></td>
+                  <td>{{ user.licenseNo }}</td>
+                </tr>
+                <tr>
+                  <td><strong>State of Issuance:</strong></td>
+                  <td>{{ user.stateOfInsurence }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Traffic Violator School Completion Date:</strong></td>
+                  <td>{{ user.schoolCompletionDate }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Traffic School Due Date:</strong></td>
+                  <td>{{ user.dueDate }}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p style="color:#a94442;text-align: center">THIS RECEIPT IS FOR YOUR RECORDS ONLY AND IS NOT VALID FOR COURT SUBMISSION.</p>
+          </div>
+        </div>

@@ -1,0 +1,78 @@
+.wizaed {
+    margin-bottom: 20px;
+}
+
+.wizaed a {
+    font-weight: $font_light;
+    padding: 5px 12px 5px 40px;
+    margin-right: 5px;
+    background: #efefef;
+    position: relative;
+    display: inline-block;
+    color: $brand_primary;
+    text-decoration:none;
+    margin-bottom: 10px;
+}
+.wizaed a:hover {cursor: pointer; cursor: hand;}
+.wizaed a.disabled:hover, a.current:hover {
+    cursor: default;
+}
+
+.wizaed a.disabled {
+    color: #000;
+}
+
+.wizaed a:before {
+    width: 0;
+    height: 0;
+    border-top: 23px inset transparent;
+    border-bottom: 23px inset transparent;
+    border-left: 22px solid #fff;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+}
+.wizaed a:after {
+    width: 0;
+    height: 0;
+    border-top: 23px inset transparent;
+    border-bottom: 23px inset transparent;
+    border-left: 22px solid #efefef;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -22px;
+    z-index: 2;
+}
+/*.wizaed a:last-child:after,*/
+.wizaed a:first-child:before {
+    border: none;
+}
+.wizaed a:first-child {
+    padding-left:15px;
+    -webkit-border-radius: 4px 0 0 4px;
+       -moz-border-radius: 4px 0 0 4px;
+            border-radius: 4px 0 0 4px;
+}
+.wizaed a:last-child {
+    -webkit-border-radius: 0 4px 4px 0;
+       -moz-border-radius: 0 4px 4px 0;
+            border-radius: 0 4px 4px 0;
+}
+.wizaed .current {
+    background: $brand_primary;
+    color: #fff;
+}
+.wizaed .current:after {
+    border-left-color: $brand_primary;
+}
+
+.wizaed .completed {
+    background: lighten($brand_primary, 10%);
+    color: #fff;
+    cursor: default;
+}
+.wizaed .completed:after {
+    border-left-color: lighten($brand_primary, 10%);
+}

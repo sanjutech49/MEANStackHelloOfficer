@@ -1,0 +1,27 @@
+.l-disclaimer {
+  @extend .container;
+  h1 {
+    font-size: 2em;
+    line-height: 1.3em;
+    margin-bottom: 30px
+  }
+  section {
+    margin-bottom: 50px;
+    @extend .row;
+    header {
+      @extend .col-md-8, .col-md-offset-2;
+      @extend .col-sm-6, .col-sm-offset-3;
+      @extend .text-center;
+    }
+    .disclaimer-container {
+      @extend .col-md-8, .col-md-offset-2;
+      @extend .col-sm-8, .col-sm-offset-2;
+      p {
+        font-size: 1.2em;
+        line-height: 2em;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+}

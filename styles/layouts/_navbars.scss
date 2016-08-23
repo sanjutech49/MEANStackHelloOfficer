@@ -1,0 +1,123 @@
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  min-height: 70px;
+  box-shadow: $header_shadow;
+  border: 0;
+
+  .container {
+    position: relative;
+  }
+
+  .navbar-nav > li > a {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 1.4rem;
+    &:hover {
+      background-color: #2196F3;
+      color: #fff;
+    }
+  }
+
+  &__button {
+    margin-top: .7rem;
+    margin-bottom: .7rem;
+    padding: .85rem 2rem !important;
+    &.right {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__telephone {
+    position: absolute;
+    right: 0;
+    font-size: 21px;
+  }
+
+  &.default {
+    background-color: $white;
+  } // End of .navbar.defaulr code block
+
+  &.inverted {
+    background-color: #444;
+    color: $white;
+
+    &--primary {
+      background-color: #f01446;
+      color: $white;
+    }
+    &--black {
+      background-color: #242424;
+      color: $white;
+    }
+
+  } // End of .navbar.inverted code block
+  &__inset {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1031;
+  }
+  &__header {
+    @extend .navbar-header;
+    height: 70px;
+    margin-left: 0 !important; //overriding Bootstrap negative margin
+    margin-right: 0 !important; //overriding Bootstrap negative margin
+    transition: all .8s ease;
+    &.centered {
+      width: 100%;
+      text-align: center;
+    }
+  } // End of .navbar__header code block
+
+  &__brand {
+    @extend .navbar-brand;
+    display: inline-block;
+    float: none;
+    padding: 0;
+    max-width: 280px;
+    height: 70px;
+    margin-right: 20px;
+    line-height: inherit;
+    &.inverted, &.inverted--primary {
+      background-image: url($logo_default);
+      background-repeat: no-repeat;
+    } // End of .navbar__brand.inverted code block
+    &.default {
+      background-image: url($logo_default);
+      background-repeat: no-repeat;
+      background-size: 60px 60px;
+      background-position: left center;
+    } // End of .navbar__brand.default code block
+  } // End of .navbar__brand code block
+
+  &__links {}
+
+  .hamburger {
+    position: absolute;
+    top: 12px;
+    right: 30px;
+  }
+
+} // End of .navbar code block
+
+
+
+@media screen and (max-width: $sm_viewport_max) {
+  .navbar {
+
+    &__button {
+      &.right {
+        right: 20px;
+      }
+    }
+
+    &__brand {
+      &.inverted {} // End of .navbar__brand.inverted code block
+      &.default {} // End of .navbar__brand.default code block
+    } // End of .navbar__brand code block
+
+    &__links {}
+
+  } // End of .navbar code block
+}

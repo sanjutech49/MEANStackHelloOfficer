@@ -1,0 +1,21 @@
+.l_certificate {
+  margin-top: 40px;
+
+  .masthead {
+    font-size: 12px;
+    address {
+      display: inline-block;
+      float: right;
+    }
+    tr td {
+      border: 0;
+      width: 50%;
+    }
+  }
+  .cert_info {
+    tr td {
+      border: 0;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}

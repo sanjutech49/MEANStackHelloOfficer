@@ -1,0 +1,24 @@
+{
+  "title":      "Rights and Responsibilities of a Pedestrian",
+  "section":    "Section IV",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "As a pedestrian, when your signal turns to WALK, you should:",
+      "answer":   "b",
+      "explaination": "The correct answer is b. You should always make sure it is safe to walk by looking left, right and then left again to check for moving vehicles before leaving the curb."
+    },
+    {
+      "_id":      2,
+      "question": "When walking at night:",
+      "answer":   "c",
+      "explaination": "The correct answer is c. Wearing clothing made of white or reflective material will help you to be more visible at night to oncoming vehicles."
+    },
+    {
+      "_id":      3,
+      "question": "TAt intersections where traffic is not controlled by signals, drivers must always yield the right of way to pedestrians.",
+      "answer":   true,
+      "explaination": "The correct answer is a. Pedestrians are unprotected and vulnerable, leaving them at high risk for death or injury if hit by a vehicle.  Pedestrians have the right of way at any intersection."
+    }
+  ]
+}

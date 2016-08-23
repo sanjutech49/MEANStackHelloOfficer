@@ -1,0 +1,50 @@
+{{>header}}
+<main role="article">
+  <article role="list">
+
+    <div class="container padding__top--50 padding__bottom--50">
+      <div class="row">
+        <div class="col-md-12">
+
+          <header>
+            <h1 class="text-center">User Profile</h1>
+          </header>
+
+          <hr>
+
+          <div class="row padding__top--50 padding__bottom--50">
+            <div class="col-md-6 col-md-offset-3">
+              <form>
+                <fieldset>
+                  <div ng-show="disableAll" class="form_group_12">
+                          Your account is locked.
+                  </div>
+                  <div class="form__group--6">
+                    <label for="firstname" class="sr-only">First Name:</label>
+                    <input ng-model="data.first_name" type="text" id="firstname" value="" placeholder="First Name" ng-disabled="disableAll" required>
+                  </div>
+
+                  <div class="form__group--6">
+                    <label for="lastname" class="sr-only">Last Name:</label>
+                    <input ng-model="data.last_name" type="text" id="lastname" value="" placeholder="Last Name" ng-disabled="disableAll" required>
+                  </div>
+
+                  <div class="form__group--12">
+                    <label for="email" class="sr-only">Email Address:</label>
+                    <input ng-model="data.email" type="email"placeholder="Email Address" ng-disabled="true" required>
+                  </div>
+                </fieldset>
+
+                <div class="form__group--12">
+                  <button ng-click="submit()" type="submit" class="btn primary wider" ng-disabled="disableAll">Update</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+{{>footer}}

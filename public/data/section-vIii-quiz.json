@@ -1,0 +1,24 @@
+{
+  "title":      "Road Rage/Aggressive Driving and Avoiding It",
+  "section":    "Section VII",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "Aggressive driving includes which of the following?",
+      "answer":   "d",
+      "explaination": "The correct answer is d.  Speeding and lane blocking can both constitute aggressive driving.  While singing loudly can be obnoxious, it is not considered aggressive."
+    },
+    {
+      "_id":      2,
+      "question": "You should use your horn in the following circumstance:",
+      "answer":   "b",
+      "explaination": "The correct answer is b. You should only use your horn to prevent a collision. Using your horn in most other instances or to show frustration is inappropriate and often illegal."
+    },
+    {
+      "_id":      3,
+      "question": "The best way to avoid frustration on the road is to:",
+      "answer":   "d",
+      "explaination": "The correct answer is d. All of the above are helpful tips to avoid and/or prevent driver frustration."
+    }
+  ]
+}

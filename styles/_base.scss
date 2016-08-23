@@ -1,0 +1,199 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+  color: $text_default;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-top: 70px;
+  margin-bottom: 96px;
+  font-family: $font_stack;
+  font-size: $font_base;
+  font-weight: $font_normal;
+  line-height: $line_height;
+  color: $text_default;
+  background-color: $white;
+}
+
+h1, h2, h3 {
+  font-family: $font_stack;
+  font-weight: $font_light;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+h4, h5, h6 {
+  font-family: $font_stack;
+  font-weight: $font_semi_bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: $font_xlarge;
+
+  strong {
+    font-weight: $font_extra_bold;
+  }
+  small {
+    font-size: .65em;
+  }
+}
+
+
+
+a {
+  color: $brand_primary;
+}
+a:visited {
+  color: $brand_primary;
+}
+
+a:hover {
+  color: lighten($brand_primary, 10%);
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.wrap {
+  margin-bottom: 130px;
+  margin-top: 50px;
+}
+.wrap_main {
+  margin-bottom: 130px;
+  // margin-top: 50px;
+}
+
+.bg_primary {
+  background-color: $brand_primary;
+  color: $white;
+}
+.shadow {
+  box-shadow: $header_shadow;
+}
+.isolate {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.sectionIndex {
+  text-transform: uppercase;
+  font-family: serif;
+}
+
+.auth_message, .email_message {
+  opacity: 0;
+  margin-left: -1000;
+  transition: all 2s ease;
+}
+
+.auth_show {
+  opacity: 1;
+  margin-left: 0;
+}
+
+.bg-danger {
+  background-color: #f1433a;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.company_info {
+  .company {
+    display: block;
+    font-size: 32px;
+    img {
+      width: 40px;
+    }
+  }
+  .street, .telephone, .email {
+    display: block;
+  }
+}
+
+.hattip {
+  border: 1px solid #ececec;
+  background-color: deepskyblue;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+  padding: 25px;
+  border-radius: 155px;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.hattip_sm {
+  border: 1px solid rgba(51, 122, 183, 0.26);
+  background-color: deepskyblue;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 100px;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: $sm_viewport) {
+  .section {
+    // padding-top: 30px;
+    // padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: $xs_viewport) {
+  h1 {
+      font-size: 28px;
+  }
+}

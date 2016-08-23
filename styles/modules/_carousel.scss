@@ -1,0 +1,29 @@
+section.homecarousel{
+	@extend .hidden-xs;
+	@extend .hidden-sm;
+	header{
+		@extend .carousel-caption;
+		top: 5%;
+		left: 0;
+		right: 0;
+		width: 100%;
+		h1 {
+			font-weight: 300;
+			font-size: 5em;
+			color: #fff;
+			margin: 0;
+			span {
+				font-weight: 800;
+			}
+		}
+		p {
+			font-size: 2em;
+		}
+	}
+	img {
+		@extend .img-responsive;
+	}
+}
+
+
+

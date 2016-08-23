@@ -1,0 +1,148 @@
+// Vendors
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
+
+/*Base*/
+@import '_variables';
+@import '_mixins';
+@import '_base';
+
+/*Layouts*/
+@import 'layouts/_footer';
+@import 'layouts/_l-home';
+@import 'layouts/_login';
+@import 'layouts/_l-how-it-works';
+@import 'layouts/_disclaimer';
+@import 'layouts/_curriculum';
+@import 'layouts/_registration';
+@import 'layouts/_certificate';
+@import 'layouts/_navbars';
+@import 'layouts/_navs';
+
+/*Modules*/
+@import 'modules/_buttons';
+@import 'modules/_heros';
+@import 'modules/_site_nav';
+@import 'modules/_carousel';
+@import 'modules/_backgrounds';
+@import 'modules/_typography';
+@import 'modules/_article_title';
+@import 'modules/_m-brand';
+@import 'modules/_m-app-footer ';
+@import 'modules/_signup-form';
+@import 'modules/_m-brand';
+@import 'modules/_m-brand-sm';
+@import 'modules/_table-of-contents';
+@import 'modules/_course-eval';
+@import 'modules/_badges';
+@import 'modules/_datepicker';
+@import 'modules/_marketing_list';
+@import 'modules/_forms';
+@import 'modules/_wizard';
+@import 'modules/_questions';
+@import 'modules/_padding-margins';
+@import 'modules/_borders';
+
+.side_drawer {
+  width: 100%;
+  height: auto;
+  background-color: #fafafa;
+  margin-left: -100%;
+  padding-left: 10%;
+  padding-top: 130px;
+  padding-bottom: 10%;
+  padding-right: 20px;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  //box-shadow: 29px 0 12px -25px rgba(0, 0, 0, 0.2);
+  border-right: 1px solid #ebebeb;
+  transition: all .7s ease;
+  z-index: 99;
+}
+
+.side_drawer.open {
+  margin-left: -5%;
+}
+
+.m-app-footer {
+    z-index: 100;
+}
+
+.m-app-nav {
+    // position: absolute;
+    // top: 0;
+    // z-index: 100;
+    width: 100%;
+}
+
+.height {
+  &--100 {
+    height: 100px;
+  }
+  &--200 {
+    height: 200px;
+  }
+  &--300 {
+    height: 300px;
+  }
+  &--400 {
+    height: 400px;
+  }
+  &--500 {
+    height: 500px;
+  }
+  &--600 {
+    height: 600px;
+  }
+  &--700 {
+    height: 700px;
+  }
+}
+
+.display {
+  &__table {
+    display: table;
+    width: 100%;
+  }
+  &__table-cell {
+    display: table-cell;
+  }
+}
+
+.align {
+  &--middle {
+    vertical-align: middle;
+  }
+}
+
+.clipart {
+  max-width: 200px;
+}
+
+.icon--pass, .icon--error {
+  position: absolute;
+  left: -30px;
+  top: 10px;
+}
+
+.icon--error {
+ color: red;
+}
+
+.icon--pass {
+  color: #21b384;
+}
+
+
+.border {
+
+  &__right--primary {
+    border-right: 1px solid lighten($brand_primary, 20%);
+  }
+  &__left--primary {
+    border-left: 1px solid lighten($brand_primary, 20%);
+  }
+
+}

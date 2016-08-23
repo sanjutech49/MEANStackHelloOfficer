@@ -1,0 +1,24 @@
+{
+  "title":      "Recent Changes/Reasons for Traffic Laws Quiz",
+  "section":    "Section I",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "Any Driver who is suspected of driving under the influence of drugs will be required to take a blood test to determine drug content unless:",
+      "answer":   "c",
+      "explaination": "The answer is c.  Both persons who are hemophiliacs and those taking prescribed anti-coagulate narcotics for a heart condition can be exempt from taking a blood test when suspected of driving under the influence."
+    },
+    {
+      "_id":      2,
+      "question": "The number one objective of traffic laws is to prevent collisions, deaths and injuries.",
+      "answer":   true,
+      "explaination": "The correct answer is a. This statement is true.  The main priority of traffic laws is to prevent collisions responsible for deaths and injuries."
+    },
+    {
+      "_id":      3,
+      "question": "The minimum distance for vehicles passing bikes is changing to:",
+      "answer":   "a",
+      "explaination": "The correct answer is a. A new law states that the minimum passing distance for vehicles passing bikes is 3 feet."
+    }
+  ]
+}

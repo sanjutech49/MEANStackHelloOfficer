@@ -1,0 +1,153 @@
+<nav ng-controller="headerCtrl" class="navbar default navbar-fixed-top">
+  <div class="navbar__inset">
+    <div class="container-fluid">
+      <div class="navbar__header"><!-- /.nav__header optional -->
+        <button id="menu-toggle" type="button" class="hamburger hidden-md hidden-lg" aria-controls="navbar">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a class="navbar__brand default" href="#"><span class="brand__text">Hello<span class="text--heavy">Officer</span></span></a>
+      </div><!-- /.navbar__header -->
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li rolse="presentation"><a href="/" ui-sref-active="active">Home</a></li>
+            <li rolse="presentation"><a href="/how-it-works" ui-sref-active="active">How It Works</a></li>
+            <li rolse="presentation"><a href="/frequently-asked-questions" ui-sref-active="active">FAQ</a></li>
+            <li rolse="presentation"><a href="/contact" ui-sref-active="active">Contact</a></li>
+          </ul>
+          <p class="navbar-text pull-right text--primary text--light">Coming Soon</p>
+<!--           <ul  ng-show="!user" class="nav navbar-nav navbar-right">
+            <li><a href="/get-started" ui-sref-active="active">Get Started</a></li>
+            <li><a href="/login" ui-sref-active="active">Login</a></li>
+            <li><a href="/help" ui-sref-active="active">Help</a></li>
+          </ul>
+          <ul  ng-show="user" class="nav navbar-nav navbar-right">
+            <li><a ui-sref-active="active" style="text-transform: capitalize" href="/myprofile"><% userName %></a></li>
+            <li><a href="/login" ui-sref-active="active">Go To Class</a></li>
+            <li><a href="/logout" ui-sref-active="active">Logout</a></li>
+            <li><a href="/help" ui-sref-active="active">Help</a></li>
+          </ul> -->
+        </div>
+    </div><!-- /.container -->
+  </div><!-- /.navbar__inset -->
+  <div class="container-fluid nav__info text-center">
+    <div class="row">
+      <div class="col-xs-6">
+        <span class="text--light">DMV License: E0849</span>
+      </div>
+      <div class="col-xs-6 border__left--primary">
+        <span class="text--light"><span class="hidden-xs">Phone Number: </span>(888) 417-5314</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main role="article">
+  <article role="list">
+
+    <div class="container padding__top--50 padding__bottom--50">
+      <div class="row">
+        <div class="col-md-12">
+
+          <header>
+            <h1 class="text--center">Contact <span class="text_primary">Hello<span class="text_heavy">Officer</span></span></h1>
+          </header>
+
+          <hr>
+
+          <h3 class="text-center">For any issues or questions about the course, contact us via mail, telephone or email.</h3>
+
+          <div class="row padding__top--50 padding__bottom--50">
+              <div class="col-md-5">
+                <div>
+                  <address class="company_info">
+                    <span class="company text_primary ">
+                        <img src="images/logo.png" alt="Hello Officer Logo">
+                        <span class="text_light">Hello</span><span class="text_heavy">Officer</span>
+                    </span>
+                    <span class="street">6535 Wilshire Blvd, Suite 261</span>
+                    <span class="city">Los Angeles</span>,
+                    <span class="state">CA</span>
+                    <span class="zip">90048</span>
+                    <span class="telephone">888-417-5314</span>
+                    <span class="email"><a href="mailto:helloofficertrafficschool@gmail.com">helloofficertrafficschool@gmail.com</a></span>
+                  </address>
+                </div>
+                <div>
+                   Office Hours:  8:00 AM-4:30 PM
+                  Closed on all major holidays.
+                  Emails will be returned within 24 hours.<br/>
+                  LIVE CHAT will be available during office hours only.  All chats received after hours will be responded to within 24 hours.
+                </div>
+              </div>
+              <div class="col-md-7">
+                  <form ng-submit="contact()" name="contactForm">
+                      <fieldset>
+                          <div class="form-group">
+                              <label for="emailaddress" class="sr-only">Email Address:</label>
+                              <input type="email" placeholder="Email Address" ng-model="user.email" required nt-focus>
+                          </div>
+                          <div class="form-group">
+                              <select ng-model="user.reasonForContact" required>
+                                  <option value="" disabled="">
+                                      Reason for Contact
+                                 </option>
+                                  <option value="Billing Support">
+                                     Billing Support
+                                  </option>
+                                  <option value="Technical Support">
+                                      Technical Support
+                                  </option>
+                                  <option value="General Question">
+                                    General Question
+                                 </option>
+                                  <option value="Certificate Inquiry">
+                                      Certificate Inquiry
+                                 </option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <textarea rows="5" placeholder="Comments:" ng-model="user.comments" required></textarea>
+                          </div>
+                      </fieldset>
+                      <button class="btn primary base" type="submit">Submit</button>
+                  </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+<footer role="contentinfo" class="footer">
+  <nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <p class="text-muted text__mobile--center">© HelloOfficer, All Rights Reserved 2016</p>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <ul class="nav navbar-nav">
+            <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
+            <li><a href="/privacy-agreement">Privacy Agreement</a></li>
+            <li><a href="/frequently-asked-questions">FAQ</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="https://www.facebook.com/" title="Connect with Hello Officer Traffic School on Facebook" target="new"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+            <li><a href="http://www.pinterest.com/" title="Connect with Hello Officer Traffic School on Pinterest" target="new"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
+            <li><a href="http://instagram.com/" title="Connect with Hello Officer Traffic School on Instagram" target="new"><i class="fa fa-instagram fa-2x"></i></a></li>
+            <li><a href="https://twitter.com/" title="Connect with Hello Officer Traffic School on Twitter" target="new"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+            <li><a href="http://tumblr.com" title="Connect with Hello Officer Traffic School on Tumblr" target="new"><i class="fa fa-tumblr-square fa-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</footer>

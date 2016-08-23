@@ -1,0 +1,193 @@
+.link--disabled {
+  cursor: default;
+}
+
+.link--none {
+  text-decoration: none !important;
+}
+
+.text {
+
+  &--xsmall, &--xsmall.vcex-heading {
+    font-size: $font_xs;
+    line-height: $font_xs;
+  }
+  &--small, &--small.vcex-heading {
+    font-size: $font_sm;
+    line-height: $font_sm;
+  }
+  &--base, &--base.vcex-heading {
+    font-size: $font_base;
+    line-height: $font_base + 1;
+  }
+  &--medium, &--medium.vcex-heading {
+    font-size: $font_med / 1.5;
+    line-height: $font_med / 1.5;
+  }
+  &--large, &--large.vcex-heading {
+    font-size: $font_lg / 1.5;
+    line-height: $font_lg / 1.5;
+  }
+  &--xlarge, &--xlarge.vcex-heading {
+    font-size: $font_xl / 1.5;
+    line-height: $font_xl / 1.5;
+  }
+  &--xxlarge, &--xxlarge.vcex-heading {
+    font-size: $font_xxl / 1.5;
+    line-height: $font_xxl / 1.5;
+  }
+  &--huge, &--huge.vcex-heading {
+    font-size: $font_huge / 1.5;
+    line-height: $font_huge / 1.5;
+  }
+
+  &--left {text-align: left;}
+  &--right {text-align: right;}
+  &--center {text-align: center;}
+
+
+  &--uppercase {text-transform: uppercase;}
+
+  &--primary {
+    color: $brand_primary;
+  }
+  &--red, &--red a {
+    color: #ff0000;
+  }
+  &--white, &--white a {
+    color: $white !important;
+  }
+  &--black, &--black a {
+    color: $black !important;
+  }
+  &--default, &--default a {
+    color: $font_color !important;
+  }
+
+  &__index {
+    @extend .clearfix;
+    margin-bottom: 20px;
+  }
+
+  &__index--num {
+    display: inline-block;
+    float: left;
+    max-width: 45px;
+    width: 10%;
+  }
+
+  &__index--after {
+      display: inline-block;
+      float: left;
+      width: 95%;
+  }
+
+  &--coral {color:             #FF7F50 !important;}
+
+  &--light {font-weight:       $font_light;}
+  &--normal {font-weight:      $font_normal;}
+  &--semibold {font-weight:    $font_semi_bold;}
+  &--bold {font-weight:        $font_bold;}
+  &--heavy {font-weight:       $font_extra_bold;}
+
+  &__shadow--xs { text-shadow: $text_shadow_xs;}
+  &__shadow--sm { text-shadow: $text_shadow_sm;}
+  &__shadow--md {text-shadow:  $text_shadow_md;}
+  &__shadow--lg {text-shadow:  $text_shadow_lg;}
+  &__shadow--xl {text-shadow:  $text_shadow_xl;}
+
+}
+
+// Phone size media query
+@media screen and (max-width: $sm_viewport_max) {
+  .text {
+    &__mobile--center {
+      text-align: center !important;
+    }
+    &__shadow--lg {
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+// Tablet size media query
+@media screen and (min-width: $sm_viewport) {
+  .text {
+
+    &--medium, &--medium.vcex-heading {
+      font-size:  $font_med   * .80;
+      line-height:   $font_med   * 1.25;
+    }
+    &--large, &--large.vcex-heading {
+      font-size:   $font_lg    * .80;
+      line-height:    $font_lg    * .80;
+    }
+    &--xlarge, &--xlarge.vcex-heading {
+      font-size:  $font_xl    * .80;
+      line-height:   $font_xl    * .80;
+    }
+    &--xxlarge, &--xxlarge.vcex-heading {
+      font-size: $font_xxl   * .80;
+      line-height:  $font_xxl   * .80;
+    }
+    &--huge, &--huge.vcex-heading {
+      font-size:    $font_huge  * .80;
+      line-height:     $font_huge  * .80;
+    }
+  }
+} // End of tablet size media query
+
+// Medium desktop size media query
+@media screen and (min-width: $md_viewport) {
+  .text {
+    &--medium, &--medium.vcex-heading {
+      font-size:  $font_med   * .95;
+      line-height:   $font_med   * 1.25;
+    }
+    &--large, &--large.vcex-heading {
+      font-size:   $font_lg    * .95;
+      line-height:    $font_lg    * .95;
+    }
+    &--xlarge, &--xlarge.vcex-heading {
+      font-size:  $font_xl    * .95;
+      line-height:   $font_xl    * .95;
+    }
+    &--xxlarge, &--xxlarge.vcex-heading {
+      font-size: $font_xxl   * .95;
+      line-height:  $font_xxl   * .95;
+    }
+    &--huge, &--huge.vcex-heading {
+      font-size:    $font_huge  * .95;
+      line-height:     $font_huge  * .95;
+    }
+  }
+  .list__checks {
+    margin-left: -20px;
+  }
+} // End of medium desktop size media query
+
+// Medium desktop size media query
+@media screen and (min-width: $md_viewport) {
+  .text {
+    &--medium, &--medium.vcex-heading {
+      font-size:  $font_med;
+      line-height:   $font_med + 1;
+    }
+    &--large, &--large.vcex-heading {
+      font-size:   $font_lg;
+      line-height:    $font_lg;
+    }
+    &--xlarge, &--xlarge.vcex-heading {
+      font-size:  $font_xl;
+      line-height:   $font_xl;
+    }
+    &--xxlarge, &--xxlarge.vcex-heading {
+      font-size: $font_xxl;
+      line-height:  $font_xxl;
+    }
+    &--huge, &--huge.vcex-heading {
+      font-size:    $font_huge;
+      line-height:     $font_huge;
+    }
+  }
+} // End of medium desktop size media query

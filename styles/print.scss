@@ -1,0 +1,35 @@
+@media print {
+  .wrap {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .l-curriculum main {
+      margin-bottom: 0;
+  }
+  body {
+    font-size: 12px;
+  }
+  .m-app-nav, .m-app-footer, .cert_controls {
+    display: none;
+  }
+  .l_certificate {
+    margin-top: 0;
+
+    h1 {
+        font-size: 32px !important;
+        margin-top: 10px !important;
+        margin-bottom: 30px;
+    }
+    .masthead {
+      font-size: 10px;
+    }
+    .cert_info {
+
+      tr td {
+        border: 0;
+        border-bottom: 1px solid #ddd;
+        padding: 4px;
+      }
+    }
+  }
+}

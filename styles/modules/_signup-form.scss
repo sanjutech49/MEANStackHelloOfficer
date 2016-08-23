@@ -1,0 +1,20 @@
+.l-registration {
+
+	article header {
+		h1, p {
+			@extend .text-center;
+		}
+	}
+	.badge_set {
+		@extend .row;
+		padding: 20px;
+
+		.badge_container {
+			@extend .col-md-4;
+		}
+	}
+
+
+
+}
+

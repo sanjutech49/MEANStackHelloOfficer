@@ -1,0 +1,108 @@
+// Variables
+
+$image_path: '/images/';
+
+$logo_default: $image_path + 'logo.png';
+$logo_inverted: $image_path + 'logo.png';
+
+// Fonts
+
+$font_stack: 'Open Sans', sans-serif;
+//Font Sizes:
+
+$font_xsmall : 10px;
+$font_small  : 12px;
+$font_base   : 16px;
+$font_medium : 24px;
+$font_large  : 42px;
+$font_xlarge : 48px;
+$font_xxlarge: 110px;
+
+$font_color: #5d5d5d;
+
+// Font Sizes
+$font_xs  : 1rem;
+$font_sm  : 1.2rem;
+$font_base: 1.8rem;
+$font_med : 2.8rem;
+$font_lg  : 3.6rem;
+$font_xl  : 4.8rem;
+$font_xxl : 6.8rem;
+$font_huge: 8rem;
+
+$line_height: 2;
+// 1.428571429
+
+// Viewports
+$vp_legacy  : 400px;
+$xs_viewport: 480px;
+$sm_viewport: 768px;
+$md_viewport: 992px;
+$lg_viewport: 1200px;
+
+// Viewports
+$xs_viewport_max: 480px - 1;
+$sm_viewport_max: 768px - 1;
+$md_viewport_max: 992px - 1;
+$lg_viewport_max: 1200px - 1;
+
+
+// Font Weights
+$font_light     : 300;
+$font_normal    : 400;
+$font_semi_bold : 600;
+$font_bold      : 700;
+$font_extra_bold: 800;
+
+// Shades
+$white    : #fff;
+$black    : #000;
+$dark_gray: #444;
+$medium_gray: #999;
+$gray: #ccc;
+$light_gray: #ededed;
+
+
+$gray_light : #f1f1f1;
+$gray_medium: #727272;
+$gray       : #404040;
+$gray_dark  : $font_color;
+$white  : #fff;
+$black  : #000;
+
+// Radius
+$radius_base: 5px;
+$btn_radius: 2px;
+$form_radius: 2px;
+
+// Shadows (use 'none' in place of shadow)
+$header_shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+$text_shadow  : 0px 1px 1px rgba(0, 0, 0, 0.3);
+$box_shadow   : 0 8px 6px -6px rgba(0, 0, 0, 0.2);
+$btn_shadow   : 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+$button_shadow:    0px 2px 3px rgba(0, 0, 0, 0.3);
+$raised_shadow: 0 5px 25px -6px rgba(0,0,0,.6);
+
+$text_shadow_xs:   0px 1px 1px rgba(0, 0, 0, 0.4);
+$text_shadow_sm:   0px 1px 3px rgba(0, 0, 0, 0.6);
+$text_shadow_md:   0px 2px 2px rgba(0, 0, 0, 0.4);
+$text_shadow_lg:   0px 3px 2px rgba(0, 0, 0, 0.4);
+$text_shadow_xl:   0px 3px 2px rgba(0, 0, 0, 0.4);
+
+// Brand Colors (Keep it neat)
+//$brand_primary  : #337ab7;
+$brand_primary  : #2196F3;
+$brand_primary_dark  : darken($brand_primary, 10%);
+$brand_secondary: #ffcc00;
+$brand_links       : $brand_primary_dark;
+$brand_links_hover : $brand_primary;
+
+$brand-success: red;
+$brand-error  : yellow;
+$brand-warning: purple;
+$brand-info   : #7d7d7d;
+$brand-default: $white;
+
+//Basic Text Colors
+$links: $brand_primary;
+$text_default: $dark_gray;

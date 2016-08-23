@@ -1,0 +1,53 @@
+.nav__main > .container .nav__brand {
+  margin-left: 0;
+}
+
+.nav {
+  &__main {
+    @extend .navbar;
+    border-radius: 0;
+    margin-bottom: 0;
+    min-height: 70px;
+    box-shadow: $header_shadow;
+    &.default {
+      background-color: $white;
+    }
+    &.inverted {
+      background-color: #444;
+    }
+  }
+  &__header {
+    @extend .navbar-header;
+    height: 70px;
+    float: none;
+    text-align: center;
+  }
+  &__brand {
+    @extend .navbar-brand;
+    padding: 0;
+    margin: 7px 0;
+    float: none;
+    display: inline-block;
+    height: 47px;
+    width: 111px;
+    &.inverted {
+      //background-image: url(#{$w-site-images-path} + 'global/dish-logo-inverted.png');
+    }
+    &.default {
+      //background-image: url(#{$w-site-images-path} + 'global/dish-logo-default.png');
+    }
+  }
+  &__links {}
+  &__info {
+    background-color: #2196F3;
+    color: #fff;
+    font-size: 1.4rem;
+    span {
+    }
+  }
+}
+
+.brand__text {
+  font-size: 3.2rem;
+  margin-left: 70px;
+}

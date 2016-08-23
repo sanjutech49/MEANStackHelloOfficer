@@ -1,0 +1,173 @@
+<nav ng-controller="headerCtrl" class="navbar default navbar-fixed-top">
+  <div class="navbar__inset">
+    <div class="container-fluid">
+      <div class="navbar__header"><!-- /.nav__header optional -->
+        <button id="menu-toggle" type="button" class="hamburger hidden-md hidden-lg" aria-controls="navbar">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a class="navbar__brand default" href="#"><span class="brand__text">Hello<span class="text--heavy">Officer</span></span></a>
+      </div><!-- /.navbar__header -->
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li rolse="presentation"><a href="/" ui-sref-active="active">Home</a></li>
+            <li rolse="presentation"><a href="/how-it-works" ui-sref-active="active">How It Works</a></li>
+            <li rolse="presentation"><a href="/frequently-asked-questions" ui-sref-active="active">FAQ</a></li>
+            <li rolse="presentation"><a href="/contact" ui-sref-active="active">Contact</a></li>
+          </ul>
+          <p class="navbar-text pull-right text--primary text--light">Coming Soon</p>
+<!--           <ul  ng-show="!user" class="nav navbar-nav navbar-right">
+            <li><a href="/get-started" ui-sref-active="active">Get Started</a></li>
+            <li><a href="/login" ui-sref-active="active">Login</a></li>
+            <li><a href="/help" ui-sref-active="active">Help</a></li>
+          </ul>
+          <ul  ng-show="user" class="nav navbar-nav navbar-right">
+            <li><a ui-sref-active="active" style="text-transform: capitalize" href="/myprofile"><% userName %></a></li>
+            <li><a href="/login" ui-sref-active="active">Go To Class</a></li>
+            <li><a href="/logout" ui-sref-active="active">Logout</a></li>
+            <li><a href="/help" ui-sref-active="active">Help</a></li>
+          </ul> -->
+        </div>
+    </div><!-- /.container -->
+  </div><!-- /.navbar__inset -->
+  <div class="container-fluid nav__info text-center">
+    <div class="row">
+      <div class="col-xs-6">
+        <span class="text--light">DMV License: E0849</span>
+      </div>
+      <div class="col-xs-6 border__left--primary">
+        <span class="text--light"><span class="hidden-xs">Phone Number: </span>(888) 417-5314</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="wrap_main">
+
+      <article>
+        <header class="article_title primary">
+          <h1>Let's get started!</h1>
+          <p>Signing up is easy. No distractions. Hassle Free.</p>
+        </header>
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="wizaed text-center hidden-xs">
+                <a class="current">Sign Up</a>
+                <a class="disabled">Security Questions</a>
+                <a class="disabled">Course</a>
+                <a class="disabled">Payment</a>
+                <a class="disabled">Test</a>
+                <a class="disabled">Certificate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <form name="userRegistrationForm">
+                <fieldset>
+
+                  <div class="form__group--6">
+                    <label for="firstname" class="sr-only">First Name:</label>
+                    <input ng-model="data.first_name" type="text" id="firstname" value="" placeholder="First Name" required nt-focus/>
+                  </div>
+
+                  <div class="form__group--6">
+                    <label for="lastname" class="sr-only">Last Name:</label>
+                    <input ng-model="data.last_name" type="text" id="lastname" value="" placeholder="Last Name" required>
+                  </div>
+
+                  <div class="form__group--6">
+                    <label for="email" class="sr-only">Email Address:</label>
+                    <input ng-model="data.email" type="email"placeholder="Email Address" required>
+                  </div>
+
+                  <div class="email_message"></div>
+
+                  <div class="form__group--6">
+                    <label for="casenumber" class="sr-only">How did you find us:</label>
+                    <select ng-model="data.search_refer">
+                      <option value="" disabled selected>How did you find us:</option>
+                      <option>Google Search</option>
+                      <option>Facebook</option>
+                      <option>Youtube</option>
+                      <option>DMV Recommendation</option>
+                      <option>Friend</option>
+                      <option>Print Ad</option>
+                      <option>Online Ad</option>
+                    </select>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="form__group--6">
+                    <label for="password" class="sr-only">Create Password:</label>
+                    <input ng-model="data.password" type="password" id="password" value="" placeholder="password" required>
+                  </div>
+
+                   <div class="form__group--6">
+                     <label for="confirmpassword" class="sr-only">Confirm Password:</label>
+                     <input type="password" id="confirmpassword" value="" placeholder="confirm password" compare-to="data.password" ng-model="password_verify" name="confirm_password"  required data-password-verify="data.password"/>
+                     <div ng-show="userRegistrationForm.confirm_password.$error.passwordVerify" class="alert-danger">
+                       Passwords do not match.
+                     </div>
+                  </div>
+
+                 <div class="form__group--6">
+                     <div id="captchaElement" class="g-recaptcha" data-sitekey="<% siteKey %>"></div>
+                 </div>
+
+                 <div class="form__group--6 text--right">
+                     <button ng-click="submit()" type="submit" class="btn primary base wider">Continue</button>
+                 </div>
+
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </article>
+
+    </div>
+  </div>
+<footer role="contentinfo" class="footer">
+  <nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <p class="text-muted text__mobile--center">© HelloOfficer, All Rights Reserved 2016</p>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <ul class="nav navbar-nav">
+            <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
+            <li><a href="/privacy-agreement">Privacy Agreement</a></li>
+            <li><a href="/frequently-asked-questions">FAQ</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 hidden-xs">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="https://www.facebook.com/" title="Connect with Hello Officer Traffic School on Facebook" target="new"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+            <li><a href="http://www.pinterest.com/" title="Connect with Hello Officer Traffic School on Pinterest" target="new"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
+            <li><a href="http://instagram.com/" title="Connect with Hello Officer Traffic School on Instagram" target="new"><i class="fa fa-instagram fa-2x"></i></a></li>
+            <li><a href="https://twitter.com/" title="Connect with Hello Officer Traffic School on Twitter" target="new"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+            <li><a href="http://tumblr.com" title="Connect with Hello Officer Traffic School on Tumblr" target="new"><i class="fa fa-tumblr-square fa-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</footer>

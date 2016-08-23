@@ -1,0 +1,36 @@
+{
+    "sectio1": [
+        {
+            "id": 1,
+            "question": "Traffic laws are important because",
+            "options": {
+                "a": "They prevent chaos on the road and promote accountability for drivers.",
+                "b": "They are not important, and just a way for the city to make money.",
+                "c": "They promote safety and provide a common understanding of the roads.",
+                "d": "A and C"
+            }
+        }
+    ],
+    "sectio2": [
+        {
+            "id": 2,
+            "question": "You could be deemed a “negligent operator” by the DMV if you get",
+            "options": {
+                "a": "4 Points on your record in 24 months",
+                "b": "8 points on your record in 36 months",
+                "c": "2 points on your record in 24 months",
+                "d": "7 points on your record in a lifetime"
+            }
+        },
+        {
+            "id": 3,
+            "question": "YA Blood Alcohol Content (BAC) of _________ or higher is considered legally under the influence of alcohol for drivers over the age of 21.",
+            "options": {
+                "a": "0.02",
+                "b": "0.03",
+                "c": "0.08",
+                "d": "0.12"
+            }
+        }
+    ]
+}

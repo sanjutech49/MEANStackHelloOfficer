@@ -1,0 +1,24 @@
+{
+  "title":      "Collision Avoidance",
+  "section":    "Section VII",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "When should you attempt to pass multiple cars at once:",
+      "answer":   "c",
+      "explaination": "The correct answer is c. It is very unsafe to try to pass multiple cars at once. It is difficult to gauge how much time you will need to pass multiple cars.  Driving on the shoulder for this purpose is illegal."
+    },
+    {
+      "_id":      2,
+      "question": "An important point to remember about making turns is:",
+      "answer":   "a",
+      "explaination": "The correct answer is a.  If your view is obstructed in any way, you could miss a nearby pedestrian or vehicle, causing a collision."
+    },
+    {
+      "_id":      3,
+      "question": "Fatal crashes frequently occur during the following times:",
+      "answer":   "d",
+      "explaination": "The correct answer is d, all of the above. Most fatal crashes happen during periods of heavy congestion and when drivers are impaired by fatigue, alcohol or other mind-altering substances."
+    }
+  ]
+}

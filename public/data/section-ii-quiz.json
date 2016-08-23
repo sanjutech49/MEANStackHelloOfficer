@@ -1,0 +1,24 @@
+{
+  "title":      "Careless Driving and its Consequences",
+  "section":    "Section II",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "Infractions stay on your public record for:",
+      "answer":   "c",
+      "explaination": "The answer is c.  Both persons who are hemophiliacs and those taking prescribed anti-coagulate narcotics for a heart condition can be exempt from taking a blood test when suspected of driving under the influence."
+    },
+    {
+      "_id":      2,
+      "question": "Collisions are:",
+      "answer":   "a",
+      "explaination": "The correct answer is a.  Collisions are usually a result of traffic laws not being followed properly, and therefore are usually preventable."
+    },
+    {
+      "_id":      3,
+      "question": "Driving carelessly can lead to the following:",
+      "answer":   "d",
+      "explaination": "The correct answer is d.  Careless driving can lead to all of the above: fines, insurance rate hikes, and loss of life/injury."
+    }
+  ]
+}

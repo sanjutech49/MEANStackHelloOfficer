@@ -1,0 +1,24 @@
+{
+  "title":      "The Vehicle",
+  "section":    "Section X",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "You should use your headlights:",
+      "answer":   "d",
+      "explaination": "The correct answer is d.  It is appropriate to use your headlights only on windy roads and after sunset. It is never appropriate to use your headlights to rush a pedestrian."
+    },
+    {
+      "_id":      2,
+      "question": "Approximately 8 out of 10 children in a fatal car crash would have survived if they had been in a child safety seat:",
+      "answer":   true,
+      "explaination": "The correct answer is a. Unfortunately, this is a true statistic."
+    },
+    {
+      "_id":      3,
+      "question": "Seatbelts:",
+      "answer":   "d",
+      "explaination": "The correct answer is d.  All of these statements are true.  Seatbelts, when worn properly, can reduce the risk of injury and death significantly.  They should be working properly in order to best protect you and should be periodically checked.  It is against the law to drive while not wearing a seatbelt."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+.l-how-it-works {
+	@extend .container;
+	main[role="article"]{
+		@extend .row;
+		article {
+			@extend .col-lg-8, .col-md-8, .col-lg-offset-2, .col-md-offset-2;
+			header {
+				h1 {
+					@extend .text-center;
+				}
+			}
+		}
+	}
+	.faq_question {
+		h3 {
+			font-weight: 600;
+		}
+	}
+}

@@ -1,0 +1,258 @@
+<div ng-controller="studentInfoCtrl">
+    <main role="article">
+
+      <article>
+          <header>
+            <h1 class="text--center">Student Information</h1>
+            <p class="text-center">Before you take your test, we need to get the rest of your information to submit to the court. Please fill in the information below.</p>
+          </header>
+          <hr>
+
+            <form name="studentInfoForm" ng-init="init()" novalidate>
+              <fieldset>
+
+                <div class="form__group--6">
+                  <label for="firstname">First Name:</label>
+                  <input ng-model="data.first_name" type="text" name="firstname" placeholder="First Name"  required>
+                </div>
+
+                <div class="form__group--6">
+                  <label for="lastname">Last Name:</label>
+                  <input ng-model="data.last_name" type="text" name="lastname" placeholder="Last Name"   required>
+                </div>
+
+                <div class="form__group--7">
+                  <label for="address">Address:</label>
+                  <input id="address" ng-model="data.street" type="text" placeholder="Street Address" googleplace required>
+                </div>
+
+                <div class="form__group--5">
+                  <label for="city">City:</label>
+                  <input id="city" ng-model="data.city" type="text" placeholder="City" required>
+                </div>
+
+                <div class="form__group--4">
+                  <label for="state">State:</label>
+                  <input type="text" ng-model="data.state" placeholder="State" required>
+                  <!-- <select ng-model="data.state">
+                    <option value="" disabled="">Select State</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                  </select> -->
+                </div>
+
+                <div class="form__group--3">
+                  <label for="zip">Zip:</label>
+                  <input id="zip" ng-model="data.zipcode" type="text" placeholder="Zip" required>
+                </div>
+
+                <div class="form__group--5">
+                  <div><label for="dob">Date of Birth: DD/MM/YYYY</label></div>
+                  <div class="row">
+                    <div class="form__group--4">
+                      <select ng-model="month" ng-options="month for month in genrateMonth"  required>
+                          <option value="" disabled="">Month:</option>
+                          <option ng-repeat="month in genrateMonth" value="<% month %>">
+                              <% month %>
+                          </option>
+                      </select>
+                    </div>
+                    <div class="form__group--4">
+                      <select ng-model="day" ng-options="day for day in genrateDays" required>
+                          <option value="" disabled="">Day:</option>
+                          <option ng-repeat="day in genrateDays" value="<% day %>">
+                              <% day %>
+                          </option>
+                      </select>
+                    </div>
+                    <div class="form__group--4">
+                      <select ng-model="year" ng-options="year for year in GenrateYears" required>
+                         <option value="" disabled="">Year:</option>
+                          <option ng-repeat="year in GenrateYears" value="<% year %>">
+                              <% year %>
+                          </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form__group--6">
+                  <label for="dln">Driver License #:</label>
+                  <input id="dln" ng-model="data.dl_number" type="text" placeholder="Driver License #" required>
+                </div>
+
+                <div class="form__group--6">
+                   <label for="dl_type">Driver License Type:</label>
+                   <select id="dl_type" ng-model="data.dl_type" required>
+                      <option disabled value="">Class Type</option>
+                      <option value="Type C Standard">Type C: Standard</option>
+                      <option value="Class A Noncommercial">Noncommercial Class A</option>
+                      <option value="Class B Noncommercial">Noncommercial Class B</option>
+                      <option value="Class A Commercial">Commercial Class A</option>
+                      <option value="Class B Commercial">Commercial Class B</option>
+                      <option value="Class M1 Motorcycles">Motorcycles Class M1</option>
+                      <option value="Class M2 Motorcycles">Motorcycles Class M2</option>
+                  </select>
+                </div>
+
+                <div class="form__group--6">
+                  <label for="state-issuer">State of Issuance:</label>
+                  <select id="state-issuer" ng-model="data.dl_state">
+                    <option disabled value="">State Issuer</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                  </select>
+                </div>
+
+                <div class="form__group--6">
+                  <label for="ticket_due_date">Traffic School Due Date</label>
+                   <input id="ticket_due_date" ng-model="data.ticket_due_date" type="text" placeholder="MM/DD/YYYY" required >
+                </div>
+
+                <div class="form__group--12">
+                  <hr>
+                  <h3 class="text--center">Ticket Information</h3>
+                </div>
+
+                <div class="form__group--6">
+                  <label for="countyname">County Name:</label>
+                  <select name="countyname" id="countyname" >
+                    <option>Select</option>
+                    <option ng-repeat="option in countyname" value="<% option %>">    <% option %>
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form__group--6">
+                  <label for="courtcity">Court City:</label>
+                  <select name="courtcity" id="courtcity" >
+                  <option>Select</option>
+                    <option ng-repeat="option in courtcity" value="<% option %>">    <% option %>
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form__group--6">
+                  <label for="court">Issuing Court and Code:</label>
+                  <select name="court" id="court" >
+                    <option>Select</option>
+                    <option ng-repeat="option in courtinfo" value="<% option.countcode %>">
+                        <% option.courtname %> : <% option.countcode %>
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form__group--6">
+                  <label for="citation-number">Citation/Case/Docket Number:</label>
+                  <input id="citation-number" ng-model="data.ticket_number" type="text" placeholder="Citation #" required>
+                </div>
+
+                <div class="form__group--6">
+                  <button ng-click="submit()" class="btn primary wider">Continue</button>
+                </div>
+
+              </fieldset>
+            </form>
+
+      </article>
+
+    </main>
+</div>

@@ -1,0 +1,80 @@
+{{>header}}
+<main role="article">
+  <article role="list">
+
+    <div class="container padding__top--50 padding__bottom--50">
+      <div class="row">
+        <div class="col-md-12">
+
+          <header>
+            <h1 class="text--center">Contact <span class="text_primary">Hello<span class="text_heavy">Officer</span></span></h1>
+          </header>
+
+          <hr>
+
+          <h3 class="text-center">For any issues or questions about the course, contact us via mail, telephone or email.</h3>
+
+          <div class="row padding__top--50 padding__bottom--50">
+              <div class="col-md-5">
+                <div>
+                  <address class="company_info">
+                    <span class="company text_primary ">
+                        <img src="images/logo.png" alt="Hello Officer Logo">
+                        <span class="text_light">Hello</span><span class="text_heavy">Officer</span>
+                    </span>
+                    <span class="street">6535 Wilshire Blvd, Suite 261</span>
+                    <span class="city">Los Angeles</span>,
+                    <span class="state">CA</span>
+                    <span class="zip">90048</span>
+                    <span class="telephone">888-417-5314</span>
+                    <span class="email"><a href="mailto:helloofficertrafficschool@gmail.com">helloofficertrafficschool@gmail.com</a></span>
+                  </address>
+                </div>
+                <div>
+                   Office Hours:  8:00 AM-4:30 PM
+                  Closed on all major holidays.
+                  Emails will be returned within 24 hours.<br/>
+                  LIVE CHAT will be available during office hours only.  All chats received after hours will be responded to within 24 hours.
+                </div>
+              </div>
+              <div class="col-md-7">
+                  <form ng-submit="contact()" name="contactForm">
+                      <fieldset>
+                          <div class="form-group">
+                              <label for="emailaddress" class="sr-only">Email Address:</label>
+                              <input type="email" placeholder="Email Address" ng-model="user.email" required nt-focus>
+                          </div>
+                          <div class="form-group">
+                              <select ng-model="user.reasonForContact" required>
+                                  <option value="" disabled="">
+                                      Reason for Contact
+                                 </option>
+                                  <option value="Billing Support">
+                                     Billing Support
+                                  </option>
+                                  <option value="Technical Support">
+                                      Technical Support
+                                  </option>
+                                  <option value="General Question">
+                                    General Question
+                                 </option>
+                                  <option value="Certificate Inquiry">
+                                      Certificate Inquiry
+                                 </option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <textarea rows="5" placeholder="Comments:" ng-model="user.comments" required></textarea>
+                          </div>
+                      </fieldset>
+                      <button class="btn primary base" type="submit">Submit</button>
+                  </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+{{>footer}}

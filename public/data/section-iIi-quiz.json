@@ -1,0 +1,24 @@
+{
+  "title":      "Operator Responsibilities Quiz",
+  "section":    "Section III",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "A good way to make sure you stay alert when driving is to:",
+      "answer":   "d",
+      "explaination": "The correct answer is d.  It is best to both wait until a time when you can be sure you are alert and make sure any medications you are taking do not cause drowsiness."
+    },
+    {
+      "_id":      2,
+      "question": "Taking a prescription medication that has not been prescribed to you before operating a motor vehicle is safe as long as:",
+      "answer":   "c",
+      "explaination": "The correct answer is c.  You should never take a prescription medication that has not been prescribed to you by a physician – especially before driving."
+    },
+    {
+      "_id":      3,
+      "question": "Driving carelessly can lead to the following:",
+      "answer":   true,
+      "explaination": "The correct answer is a.  It is true that the action of lightly pressing the gas pedal and brake pedal simultaneously will dry your brakes."
+    }
+  ]
+}

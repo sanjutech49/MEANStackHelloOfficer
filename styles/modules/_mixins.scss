@@ -1,0 +1,29 @@
+// Mixins and Tools
+@mixin setGradiant ($bgColor,$bgColorDark) {
+    background-color     : $bgColor;
+    background-image     : linear-gradient(to bottom, $bgColor,$bgColorDark);
+    background-repeat    : repeat-x;
+    // background-attachment: fixed;
+}
+
+@mixin twoToneButton ($bgColor, $bgColorDark, $color) {
+    color: $color;
+    background: $bgColor; /* Old browsers */
+    background: linear-gradient(to bottom, $bgColor 0%,$bgColor 50%,$bgColorDark 51%,$bgColorDark 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bgColor', endColorstr='$bgColorDark',GradientType=0 ); /* IE6-9 */
+
+    &:hover {
+        color: $color;
+        background: linear-gradient(to bottom, darken($bgColor, 5%) 0%, darken($bgColor, 5%) 50%, darken($bgColorDark , 5%) 51%,darken($bgColorDark , 5%) 100%);
+    }
+
+}
+
+@mixin inputs-inline {
+    .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+      position: relative;
+    }
+}

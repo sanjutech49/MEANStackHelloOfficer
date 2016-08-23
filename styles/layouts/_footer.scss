@@ -1,0 +1,21 @@
+.footer {
+	border-top: 1px solid $light_gray;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: $font_small;
+
+	p {
+		margin-bottom: 0;
+		color: $medium_gray;
+	}
+
+	.nav > li > a {
+		font-size: $font_small;
+		&:hover {
+			color: lighten($brand_primary, 10%);
+			background-color: $white;
+		}
+	}
+
+}

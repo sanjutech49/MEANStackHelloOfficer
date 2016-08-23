@@ -1,0 +1,67 @@
+header {
+  .site_nav {
+    @extend .navbar, .navbar-default;
+    margin-bottom: 0;
+    //background: url('../images/bg_light.png') repeat;
+    hgroup {
+      @extend .navbar-header;
+      margin-right: 25px;
+    }
+    .main_nav {
+      @extend .nav, .navbar-nav;
+    }
+    .user_nav {
+      @extend .nav, .navbar-nav, .navbar-right;
+    }
+  }
+  .header_info{
+    display: none;
+    text-align: right;
+    //background: url('../images/bg_light.png') repeat;
+    > ul {
+      @extend .list-inline;
+      margin-bottom: 0;
+      font-size: $font_xsmall + 2;
+      font-weight: $font_semi_bold;
+      color: $brand_primary;
+      text-shadow: $text_shadow;
+    }
+  }
+}
+
+
+@media (min-width: $sm_viewport) {
+  header {
+    .main_nav>li>a, .user_nav>li>a {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+}
+@media (min-width: $md_viewport) {
+  header {
+    .header_info {
+      display: block;
+    }
+  }
+}
+
+.m-app-nav {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    //background: url('../images/bg_light.png') repeat;
+    .top-nav {
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .header_info{
+      text-align: right;
+      //background: url('../images/bg_light.png') repeat;
+      > ul {
+        @extend .list-inline;
+        margin-bottom: 0;
+        font-size: $font_xsmall + 2;
+        font-weight: $font_semi_bold;
+        color: $brand_primary;
+        //text-shadow: $text_shadow;
+      }
+  }
+}

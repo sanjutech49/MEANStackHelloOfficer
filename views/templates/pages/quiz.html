@@ -1,0 +1,79 @@
+
+    <div ng-controller="QuizController">
+
+      <div ng-hide="review">
+        <h1 class="text--center"><% quiz.title %></h1>
+      </div>
+        <hr>
+        <!-- USE THIS IF PASSED -->
+
+        <div ng-show="isCompleted" id="passedQuiz" class="text-center">
+          <p class="h3 text--center"><% successMessage %></p>
+        </div>
+
+        <!-- END OF PASSED QUIZ MESSAGE -->
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div id="reviewSection" ng-show="!review && !isCompleted">
+                <form ng-show="!done" class="quiz">
+                  <div ng-repeat="ques in quiz.questions">
+                    <p class="text__index"><span class="text__index--num"><% $index+1 %>.</span> <span class="text__index--after"><% ques.question %></span></p>
+                    <div ng-repeat="ans in ques.answer">
+                      <div class="radio" ng-init="ans.question=$parent.$index">
+                        <label>
+                          <input type="radio" ng-model="ques.selectedAnswer" name="selected<%ques.source%>" ng-value="ans">
+                          <span class="text__index--char"><% indexChar($index) %>.</span> <% ans.answer %>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button ng-click="submitQuiz()" class="btn primary wider">Submit Quiz</button>
+                </form>
+
+                <form ng-show="done" class="quiz">
+                    <h2><% security.question %></h2>
+                    <div ng-repeat="a in security.answers">
+                      <div type="radio" name="securityQuestions" ng-value="a" ng-model="security.selected">
+                        <label>
+                          <input type="radio" name="securityQuestions" ng-value="a" ng-model="security.selected">
+                          <%a%>
+                        </label>
+                      </div>
+                    </div>
+                  <button ng-click="submit()" class="btn primary wider">Submit</button>
+                </form>
+              </div>
+
+              <div ng-show="review && !isCompleted">
+                <p class="text--light text--medium text--center">Sorry, you failed the quiz. Please review section <span class="sectionIndex"></span> and retake the quiz.</p>
+                <form class="quiz">
+                  <div ng-repeat="ques in AllAns">
+                    <div class="questionContainer">
+                      <p><span class="text__index--num"><% $index+1 %>.</span> <% ques.question %></p>
+                      <ul>
+                        <li class="radio" ng-repeat="ans in ques.answer" >
+                          <span ng-init="ans.question=$parent.$index">
+                            <i class="fa fa-check icon--pass" ng-show="IsCorrectAnswer(ans._id)"></i>
+                            <i class="fa fa-times icon--error" ng-show="showYellowIfwrong(ans._id)"></i>
+                            <!-- <i class="fa fa-times icon--error" ng-show="showYellowIfwrong(ans._id)"></i> -->
+                            <!-- <span ng-show="!IsCorrectAnswer(ans._id) && !showYellowIfwrong(ans._id)">
+                            &nbsp;
+                            </span> -->
+                            <span class="text__index--char"><% indexChar($index) %>.</span> <% ans.answer %>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <br>
+                  <button ng-click="restart()" class="btn primary wider">Restart Section <span class="sectionIndex"></span></button>
+
+                </form>
+              </div>
+
+            </div><!-- /.col-md-12 -->
+          </div><!-- /.row -->
+        </div>

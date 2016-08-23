@@ -1,0 +1,14 @@
+.registration_container {
+  //padding-top: 50px;
+}
+
+.l-registration .section {
+  padding-top: 50px;
+  // padding-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-registration .section {
+    padding-top: 10px;
+  }
+}

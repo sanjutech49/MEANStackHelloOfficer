@@ -1,0 +1,603 @@
+
+
+  <div class="wrap">
+    <div class="l-curriculum" ng-controller="course_evaluationCtrl">
+
+    <main role="article">
+
+      <article>
+            <div id="timer-div" class="alert alert-warning">
+          <% FinalExamTimer %>
+       </div>
+        <h1>COURSE EVALUATION</h1>
+
+        <p>This completed course evaluation will provide the traffic school and DMV valuable feedback from your perspective. <strong>Submitting this form is a requirement for completing the course, however your answers remain voluntary.</strong> To satisfy this requirement you will need to provide your name and school information this will document that you have met the course evaluation requirement. Any information provided on this form, either positive or negative, will not affect the status of your driving record or credit received for completion of this class.</p>
+
+
+
+        <form class="course-eval">
+            <h3>General Questions</h3>
+            <hr>
+
+            <fieldset>
+                <div class="form-group">
+                <label for="firstname">First Name:</label>
+                *<input type="text" id="firstname" ng-model="survey.first_name" value="" placeholder="First Name" required>
+              </div>
+              <div class="form-group">
+                <label for="middleinitial">Middle Initial:</label>
+                <input type="text" id="middleinitial" ng-model="survey.middle_name" value="" placeholder="M">
+              </div>
+              <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                *<input type="text" id="lastname" ng-model="survey.last_name" value="" placeholder="Last Name" required>
+              </div>
+              <!-- <div class="form-group">
+                <label for="user_id">Email:</label>
+                *<input type="email" id="user_id" ng-model="survey.user_id" value="" placeholder="Email" required>
+              </div> -->
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="schoolname">School Name:</label>
+                    *<input type="text" id="schoolname" ng-model="survey.school_name" value="" placeholder="School Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="schoollicense">School License #:</label>
+                    *<input type="text" id="schoollicense" ng-model="survey.school_license" value="" placeholder="School License #" required>
+                </div>
+                <div class="form-group">
+                    <label for="completiondate">Course Completion Date</label>
+                    *<input type="text" id="completiondate"  ng-model="survey.course_completion_date" value="" placeholder="Course Completion Date" required>
+                </div>
+            </fieldset>
+
+            <h3>Additional Questions</h3>
+            <hr>
+            <fieldset>
+              <p>Answer questions 1 - 7 using a scale of 1 - 10, 10 for excellent and 1 for poor. Please explain all questions scored 5 or less in the comment box below.</p>
+              <p><span>1.</span><% survey.questions[0].question %></p>
+
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[0].answer" name="question1" value="1"> 1
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[0].answer" name="question1" value="2"> 2
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[0].answer" name="question1" value="3"> 3
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[0].answer" name="question1" value="4"> 4
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[0].answer" name="question1" value="5"> 5
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[0].answer" name="question1" value="6"> 6
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[0].answer" name="question1" value="7"> 7
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[0].answer" name="question1" value="8"> 8
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[0].answer" name="question1" value="9"> 9
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[0].answer" name="question1" value="10"> 10
+                </label>
+              </div>
+              <p><span>2.</span><% survey.questions[1].question %></p>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[1].answer"  name="question2" value="1"> 1
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[1].answer" name="question2" value="2"> 2
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[1].answer" name="question2" value="3"> 3
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[1].answer" name="question2" value="4"> 4
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[1].answer" name="question2" value="5"> 5
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[1].answer" name="question2" value="6"> 6
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[1].answer" name="question2" value="7"> 7
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[1].answer" name="question2" value="8"> 8
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[1].answer" name="question2" value="9"> 9
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[1].answer" name="question2" value="10"> 10
+                </label>
+              </div>
+              <p><span>3.</span><% survey.questions[2].question %></p>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[2].answer" name="question3" value="1"> 1
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[2].answer" name="question3" value="2"> 2
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[2].answer" name="question3" value="3"> 3
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[2].answer" name="question3" value="4"> 4
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[2].answer" name="question3" value="5"> 5
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[2].answer" name="question3" value="6"> 6
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[2].answer" name="question3" value="7"> 7
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[2].answer" name="question3" value="8"> 8
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[2].answer" name="question3" value="9"> 9
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[2].answer" name="question3" value="10"> 10
+                </label>
+              </div>
+              <p><span>4.</span><% survey.questions[3].question %></p>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[3].answer" name="question4" value="1"> 1
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[3].answer" name="question4" value="2"> 2
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[3].answer" name="question4" value="3"> 3
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[3].answer" name="question4" value="4"> 4
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[3].answer" name="question4" value="5"> 5
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[3].answer" name="question4" value="6"> 6
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[3].answer" name="question4" value="7"> 7
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[3].answer" name="question4" value="8"> 8
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[3].answer" name="question4" value="9"> 9
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[3].answer" name="question4" value="10"> 10
+                </label>
+              </div>
+              <p><span>5.</span><% survey.questions[4].question %></p>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[4].answer" name="question5" value="1"> 1
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[4].answer" name="question5" value="2"> 2
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[4].answer" name="question5" value="3"> 3
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[4].answer" name="question5" value="4"> 4
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[4].answer" name="question5" value="5"> 5
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[4].answer" name="question5" value="6"> 6
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[4].answer" name="question5" value="7"> 7
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[4].answer" name="question5" value="8"> 8
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[4].answer" name="question5" value="9"> 9
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[4].answer" name="question5" value="10"> 10
+                </label>
+              </div>
+             <p><span>6.</span><% survey.questions[5].question %></p>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[5].answer" name="question6" value="1"> 1
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[5].answer" name="question6" value="2"> 2
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[5].answer" name="question6" value="3"> 3
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[5].answer" name="question6" value="4"> 4
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[5].answer" name="question6" value="5"> 5
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[5].answer" name="question6" value="6"> 6
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[5].answer" name="question6" value="7"> 7
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[5].answer" name="question6" value="8"> 8
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[5].answer" name="question6" value="9"> 9
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[5].answer" name="question6" value="10"> 10
+                </label>
+              </div>
+              <p><span>7.</span><% survey.questions[6].question %></p>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[6].answer" name="question7" value="1"> 1
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[6].answer" name="question7" value="2"> 2
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[6].answer" name="question7" value="3"> 3
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[6].answer" name="question7" value="4"> 4
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[6].answer" name="question7" value="5"> 5
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[6].answer" name="question7" value="6"> 6
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[6].answer" name="question7" value="7"> 7
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[6].answer" name="question7" value="8"> 8
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[6].answer" name="question7" value="9"> 9
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" ng-model="survey.questions[6].answer" name="question7" value="10"> 10
+                </label>
+              </div>
+            </fieldset>
+
+            <br>
+            <br>
+            <!-- NEW SECTION -->
+
+            <fieldset>
+               <p><span>1.</span> <% survey.questions[7].question %></p>
+
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[7].answer" name="section5-q1" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[7].answer" name="section5-q1" value="no"> No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio"  ng-model="survey.questions[7].answer" name="section5-q1" value="n/a"> N/A
+                  </label>
+                </div>
+              </div>
+
+               <p><span>2.</span> <% survey.questions[8].question %></p>
+
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[8].answer" name="section5-q2" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[8].answer" name="section5-q2" value="no"> No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio"  ng-model="survey.questions[8].answer" name="section5-q2" value="n/a"> N/A
+                  </label>
+                </div>
+              </div>
+
+            <p><span>3.</span> <% survey.questions[9].question %></p>
+
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[9].answer" name="section5-q3" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[9].answer" name="section5-q3" value="no"> No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio"  ng-model="survey.questions[9].answer" name="section5-q3" value="n/a"> N/A
+                  </label>
+                </div>
+              </div>
+
+              <p><span>4.</span> <% survey.questions[10].question %></p>
+
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[10].answer" name="section5-q5" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[10].answer" name="section5-q5" value="no"> No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio"  ng-model="survey.questions[10].answer" name="section5-q5" value="n/a"> N/A
+                  </label>
+                </div>
+              </div>
+
+              <p><span>5.</span> <% survey.questions[11].question %></p>
+
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[11].answer" name="section5-q6" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[11].answer" name="section5-q6" value="no"> No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio"  ng-model="survey.questions[11].answer" name="section5-q6" value="n/a"> N/A
+                  </label>
+                </div>
+              </div>
+
+              <p><span>6.</span> <% survey.questions[12].question %></p>
+
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[12].answer" name="section5-q7" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[12].answer" name="section5-q7" value="no"> No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio"  ng-model="survey.questions[12].answer" name="section5-q7" value="n/a"> N/A
+                  </label>
+                </div>
+              </div>
+
+              <p><span>7.</span> <% survey.questions[13].question %></p>
+
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[13].answer" name="section5-q8" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[13].answer" name="section5-q8" value="no"> No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio"  ng-model="survey.questions[13].answer" name="section5-q8" value="n/a"> N/A
+                  </label>
+                </div>
+              </div>
+
+              <p><span>8.</span> <% survey.questions[14].question %></p>
+
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[14].answer" name="section5-q9" value="yes"> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" ng-model="survey.questions[14].answer" name="section5-q9" value="no"> No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio"  ng-model="survey.questions[14].answer" name="section5-q9" value="n/a"> N/A
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <p><% survey.questions[15].question %>:</p>
+
+            <textarea rows="5" value="" ng-model="survey.questions[15].answer"></textarea>
+
+            <br>
+            <br>
+
+            <button ng-click="save()" id="submit-evaluation">Submit</button>
+        </form>
+
+
+      </article>
+
+    </main>
+
+    </div>
+  </div>
+
+

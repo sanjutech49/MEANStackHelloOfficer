@@ -1,0 +1,188 @@
+<header>
+<div class="navbar navbar-default navbar-fnt navbar-backgrnd" ng-controller="adminHeaderCtrl">
+    <div class="navbar-header">
+        <div class="collapse navbar-collapse">
+             <h1>Hello Officer Admin Panel</h1>
+        </div>
+    </div>
+    <div class="navbar-header pull-right">
+        <div class="collapse navbar-collapse">
+           <h1>
+            <a href="/admin/logout" class="btn btn-info" ng-show="admin">
+                Logout
+           </a>
+           <a href="/admin/login" class="btn btn-info" ng-show="!admin">
+                Login
+           </a>
+           </h1>
+        </div>
+    </div>
+    <div class="navbar-header pull-right">
+        <div class="collapse navbar-collapse">
+           <h1>
+            <a href="#" onclick="window.location.href='/'" class="btn btn-info">
+                Go To Site
+           </a>
+           </h1>
+        </div>
+    </div>
+    <div class="navbar-header pull-right" ng-show="username">
+        <div class="collapse navbar-collapse">
+           <h1>
+            <a href="#" class="btn btn-info">
+               Hi <% username %>
+           </a>
+           </h1>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+</header>
+<div class="container">
+
+<div id="quiz">
+
+  <main>
+    <header>
+      <h1>Test/Quiz</h1>
+      <p>Use roman numerals for sections and and chapters</p>
+    </header>
+  </main>
+
+  <div id="utilities-navigator">
+    <button type="button" class="btn btn-primary" ng-click="create()">Create</button>
+  </div>
+
+  <hr>
+
+  <div class="create" ng-show="showCreate">
+
+    <form>
+
+      <div class="form-group">
+        <label for="quiz-title">Test/Quiz Title:</label>
+        <input id="quiz-title" type="text" ng-model="quiz.title" class="form-control">
+      </div>
+
+      <div class="form-group">
+             <div><label>Mark As Default Final Exam:</label></div>
+             <label>
+                <input id="quiz-title" name="isFinalDefault" type="radio" ng-model="quiz.isDefaultFinalExam"  ng-value="true">
+              true
+             </label>
+             <label>
+                <input id="quiz-title" name="isFinalDefault" type="radio" ng-model="quiz.isDefaultFinalExam"  ng-value="false" checked="checked">
+                 false
+             </label>
+      </div>
+
+      <div class="form-group">
+        <label for="quiz-chapter">Test/Quiz Chapter:</label>
+        <input id="quiz-chapter" type="text" ng-model="quiz.chapter" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="quiz-section">Test/Quiz Section:</label>
+        <input id="quiz-section" type="text" ng-model="quiz.section" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="restart-page">Test/Quiz Restart Page:</label>
+        <input id="restart-page" type="text" ng-model="quiz.restart_section" class="form-control">
+      </div>
+
+
+      <h2>Test/Quiz Questions</h2>
+      <button ng-click="newQuestion()" class="btn btn-primary">Create New Question</button>
+      <hr>
+
+      <div ng-repeat="question in quiz.questions">
+ 
+        <div class="form-group">
+          <label>Test/Quiz Question <% $index+1 %>:</label>
+          <input type="text" ng-model="question.question" class="form-control">
+        </div>
+        
+        <div class="form-group">
+            <div><label>Mark As Bonus Question:<% question.isBonusQuestion %></label></div>
+             <label>
+                <input id="quiz-bonus" type="checkbox" name="isBonusQuestion" ng-model="question.isBonusQuestion">
+             </label>
+             <label ng-show="question.isBonusQuestion">Yes</label>
+             <label ng-show="!question.isBonusQuestion">No</label>
+        </div>
+
+        <div class="form-group">
+          <button ng-click="removeQuestion(question)" class="btn btn-danger">Remove Question  <% $index+1 %></button>
+        </div>
+
+
+        <div class="form-group">
+          <label>Explanation:</label>
+          <textarea ng-model="question.explanation" class="form-control" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+          <span><strong>Answers: </strong></span>
+          <button ng-click="newAnswer(question)" class="btn btn-primary btn-sm">Create New Answer</button>
+        </div>
+
+        <hr>
+
+        <div  ng-repeat="answer in question.answer">
+
+          <div class="form-group">
+            <p>Answer <strong><span class="text-primary text-uppercase"><% indexChar($index) %>:</span></strong></p>
+            <div class="input-group">
+              <input type="text" ng-model="answer.answer" class="form-control">
+              <span class="input-group-addon">
+
+               <!--  <input type="radio" name="<% $parent.$index %>" ng-model="answer.correct" ng-value="true"> -->
+
+                <input type="radio" name="<% $parent.$index %>_<% $index %>" ng-model="answer.correct" ng-value="false">Incorrect
+                <input type="radio" name="<% $parent.$index %>_<% $index %>" ng-model="answer.correct" ng-value="true">Correct
+
+
+
+              </span>
+            </div><!-- /input-group -->
+          </div>
+
+          <div class="form-group clearfix">
+            <button ng-click="removeAnswer(question, answer)" class="btn btn-danger btn-sm pull-right">Remove Answer</button>
+          </div>
+
+
+        </div><!-- End of question answer -->
+
+
+      </div><!-- End of quiz question -->
+
+      <div class="form-group">
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" ng-click="clear()" class="btn btn-default" disabled>Clear Quiz</button>
+          <button type="button" ng-click="save()" class="btn btn-default">
+            <span ng-show="!loader">Save Quiz Changes</span>
+            <i ng-show="loader"  class="fa fa-circle-o-notch fa-spin"></i>
+          </button>
+          <button type="button" ng-click="newQuestion()" class="btn btn-default">New Question</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+  <ul class="list" ng-repeat="ll in quiz_list">
+    <li>
+      <span> <% ll.title %> </span>
+      <button ng-click="edit(ll)">Edit Quiz</button>
+      <button ng-click="ll.remove = true">Remove Quiz</button>
+      <div class="removeConfirm" ng-show="ll.remove">
+        <button ng-click="ll.remove = false">Cancel</button>
+        <button ng-click="remove(ll)">Remove</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+</div>

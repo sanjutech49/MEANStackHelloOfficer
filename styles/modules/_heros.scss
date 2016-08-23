@@ -1,0 +1,283 @@
+$hero_cop_car_lights:     url($image_path  + 'heros/bg-cop-car-lights.png');
+
+$hero_snowflake_lg:     url($image_path  + 'hero/bg-snowflake-lg.jpg');
+$hero_snowflake_md:     url($image_path  + 'hero/bg-snowflake-md.jpg');
+$hero_snowflake_sm:     url($image_path  + 'hero/bg-snowflake-sm.jpg');
+$hero_snowflake_xs:     url($image_path  + 'hero/bg-snowflake-xs.jpg');
+
+$hero_thanksgiving_lg:  url($image_path  + 'hero/bg-thanksgiving-lg.png');
+$hero_thanksgiving_md:  url($image_path  + 'hero/bg-thanksgiving-md.jpg');
+$hero_thanksgiving_sm:  url($image_path  + 'hero/bg-thanksgiving-sm.jpg');
+$hero_thanksgiving_xs:  url($image_path  + 'hero/bg-thanksgiving-xs.jpg');
+
+$hero_football_lg:      url($image_path  + 'hero/bg-football-lg.jpg');
+$hero_football_md:      url($image_path  + 'hero/bg-football-md.jpg');
+$hero_football_sm:      url($image_path  + 'hero/bg-football-sm.jpg');
+$hero_football_xs:      url($image_path  + 'hero/bg-football-xs.jpg');
+
+$hero_bluewave:         url($image_path  + 'hero/bg-wave-desktop.png');
+$hero_leather:          url($image_path  + 'hero/bg-leather-repeat.png');
+$hero_halloween:        url($image_path  + 'hero/bg-halloween.png');
+
+
+$hero_thanksgiving_tv:  url($image_path  + 'hopper-tv-fall.png');
+$hero_halloween-mobile: url($image_path  + 'hero/bg-halloween-mobile.png');
+$hero_limitedtime:      url($image_path  + 'hero/bg-landscape.jpg');
+$hero_white:            $white;
+$hero_default:          $hero_white;
+$overlap-txt:           url($image_path + "background-pattern.png");
+$checknow-btn:          url($image_path + "button-check-now.png") no-repeat;
+
+.hero {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+
+  &.copcar {
+    background: $hero_cop_car_lights;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.default {
+    background-color: $white;
+  }
+  &.limitedtime{
+    background: $hero_limitedtime;
+    padding-bottom:0;
+    background-size: cover;
+    .form-row{
+      background-color: #db102d;
+      padding: 30px 0;
+      margin: 0;
+      margin-top:25px;
+      @media screen and (max-width:992px){
+        input{
+          font-size: 24px;
+        }
+      }
+      input{
+        margin-top: 15px;
+        height: 80px;
+        font-size: 34px;
+        letter-spacing: -1px;
+      }
+      .button-img-checknow{
+        background:$checknow-btn;
+        height: 104px;
+      }
+    }
+  }
+  &.mood {
+    animation: mood 20s ease infinite;
+    background: linear-gradient(84deg, #085082, #d10e5a);
+    background-size: 400% 400%;
+    color: $white;
+    box-shadow: inset 0px 0px 180px 80px rgba(0, 0, 0, 0.25);
+  }
+  &.wave {
+    background-image: $hero_bluewave;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+    box-shadow: inset 0px 0px 75px 40px rgba(0, 0, 0, 0.2);
+    &.blue {
+      background-color: #085082;
+      color: $white;
+    }
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  &.snowflake {
+    background: $hero_snowflake_xs;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+
+    .has-success {
+      box-shadow: 0 0 65px rgba(248, 166, 14, 0.7);
+      transform: all 2s ease-in;
+    }
+
+    a, p, h1, h2, h3, h4, h5, h6 {
+      color: $white;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+  &.purple {
+    background: rgba(31,38,66,1);
+    background: -moz-linear-gradient(top, rgba(31,38,66,1) 0%, rgba(85,89,124,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(31,38,66,1)), color-stop(100%, rgba(85,89,124,1)));
+    background: -webkit-linear-gradient(top, rgba(31,38,66,1) 0%, rgba(85,89,124,1) 100%);
+    background: -o-linear-gradient(top, rgba(31,38,66,1) 0%, rgba(85,89,124,1) 100%);
+    background: -ms-linear-gradient(top, rgba(31,38,66,1) 0%, rgba(85,89,124,1) 100%);
+    background: linear-gradient(to bottom, rgba(31,38,66,1) 0%, rgba(85,89,124,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f2642', endColorstr='#55597c', GradientType=0 );
+
+    .has-success {
+      box-shadow: 0 0 65px rgba(248, 166, 14, 0.7);
+      transform: all 2s ease-in;
+    }
+
+    a, p, h1, h2, h3, h4, h5, h6 {
+      color: $white;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 400;
+    &--sm {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    &--base {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    &--md {
+      font-size: 2.6rem;
+      line-height: 2.6rem;
+    }
+    &--promo {
+      font-size: 3.5rem;
+      line-height: 3rem;
+      &--sm {
+        font-size: .55em;
+        line-height: .55em;
+      }
+    }
+    &--lg {
+      font-size: 6.2rem;
+      text-shadow: $text_shadow_lg;
+    }
+    &--xl {
+      font-size: 3.6rem;
+      line-height: 2.5rem;
+    }
+    &--jumbo {
+      font-size: 3.6rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 3rem;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 1.8rem;
+    &--xs {}
+    &--sm {}
+    &--base {}
+    &--lg {
+      font-size: 2.0rem;
+    }
+  }
+  &__zipinput {
+    font-size: 2.0rem;
+  }
+  .overlap-txt{
+    width: 100%;
+    height: 50px;
+    .inner{
+      height: 50%;
+      border-bottom:1px solid white;
+    }
+    span{
+      background:$overlap-txt;
+    }
+  }
+}
+
+@-webkit-keyframes mood {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes mood {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes mood {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+
+@media screen and (min-width: $sm_viewport) {
+  .hero {
+    &.snowflake {
+      background: $hero_snowflake_sm;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    &.default {
+      background-position: top center;
+      background-size: auto;
+      .hero__title {
+        font-size: 5.6rem;
+        line-height: 5rem;
+      }
+      .hero__text {
+        font-size: 2.4rem;
+      }
+      .hero__telephone {
+        font-size: 2.8rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .hero {
+    .container {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: $md_viewport) {
+  .hero {
+    &.showflake {
+      background: $hero_snowflake_md;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    &__title {
+      &--promo {
+        font-size: 5rem;
+        line-height: 4rem;
+      }
+    }
+  }
+}
+@media screen and (min-width: $lg_viewport) {
+  .hero {
+    &.snowflake {
+      background: $hero_snowflake_lg;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+    }
+  }
+}

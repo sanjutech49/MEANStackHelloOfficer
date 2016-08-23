@@ -1,0 +1,87 @@
+<header>
+<div class="navbar navbar-default navbar-fnt navbar-backgrnd" ng-controller="adminHeaderCtrl">
+    <div class="navbar-header">
+        <div class="collapse navbar-collapse">
+             <h1>Hello Officer Admin Panel</h1>
+        </div>
+    </div>
+    <div class="navbar-header pull-right">
+        <div class="collapse navbar-collapse">
+           <h1>
+            <a href="/admin/logout" class="btn btn-info" ng-show="admin">
+                Logout
+           </a>
+           <a href="/admin/login" class="btn btn-info" ng-show="!admin">
+                Login
+           </a>
+           </h1>
+        </div>
+    </div>
+    <div class="navbar-header pull-right">
+        <div class="collapse navbar-collapse">
+           <h1>
+            <a href="#" onclick="window.location.href='/'" class="btn btn-info">
+                Go To Site
+           </a>
+           </h1>
+        </div>
+    </div>
+    <div class="navbar-header pull-right" ng-show="username">
+        <div class="collapse navbar-collapse">
+           <h1>
+            <a href="#" class="btn btn-info">
+               Hi <% username %>
+           </a>
+           </h1>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+</header>
+
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6 admin-login-form">
+     <div class="row admin-form-title"><h2>Log in here</h2></div>
+     <div class="row">
+       <form name="adminLoginForm" ng-submit="AdminLogin()">
+      
+        <div class="row form-group">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+               <label for="email">Email address:&nbsp*</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="email" ng-model="email" class="form-control" id="email" required/>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+               <label for="pwd">Password:&nbsp*</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="password" ng-model="password" class="form-control" id="pwd" required/>
+            </div>
+        </div>
+        <div class="row form-group" ng-show="error">
+            <div class="col-sm-5"></div>
+            <div class="col-sm-5 text-danger bg-danger">
+                   <p>
+                       Invalid email or password.
+                   </p> 
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                 <button type="submit" class="btn btn-info admin-login-btn"> 
+                       Log in
+                 </button>
+            </div>
+       </div>
+       </form>
+     </div>
+  </div>
+</div>

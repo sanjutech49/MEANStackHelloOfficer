@@ -1,0 +1,24 @@
+{
+  "title":      "Driving Maneuvers",
+  "section":    "Section V",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "When backing out of a parking spot:",
+      "answer":   "d",
+      "explaination": "The correct answer is d.  When backing out of a parking spot, you should check your mirrors for vehicles or pedestrians around you, turn your body to look over your right and left shoulder to check your blind spots, and above all proceed slowly and patiently."
+    },
+    {
+      "_id":      2,
+      "question": "If your car were to begin fishtailing, you would experience:",
+      "answer":   "a",
+      "explaination": "The correct answer is a. Think of a fish swimming – the rear of the fish sways left and right while the front of the fish remains stationary. When a car “fishtails,” the back end skids in a different direction than the front end, like the tail of a fish."
+    },
+    {
+      "_id":      3,
+      "question": "The trick to returning safely to the road after driving off the road or to the shoulder involves very quickly steering back into the road in order to beat oncoming traffic.",
+      "answer":   false,
+      "explaination": "TThe correct answer is b.  This statement is false.  The trick to maneuvering back onto the road is to use caution, proceed very slowly, and check for oncoming vehicles thoroughly before steering back onto the road."
+    }
+  ]
+}

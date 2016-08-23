@@ -1,0 +1,31 @@
+{
+  "title":      "Traffic Violator Exam",
+  "Section I": [
+    {
+      "_id":      1,
+      "question": "Traffic laws are important because",
+      "answer":   "d",
+      "explaination": "TThe correct answer is d. Traffic laws are in place to promote safety, order and a common understanding."
+    },
+    {
+      "_id":      2,
+      "question": "According to recent changes in traffic laws:",
+      "answer":   "a",
+      "explaination": "The correct answer is a. Sorry, kids. In 2014, a law was passed to prohibit drivers under the age of 18 from using any kind of text-based communications device, including those that are hands-free."
+    }
+  ],
+  "Section II": [
+    {
+      "_id":      1,
+      "question": "Traffic laws are important because",
+      "answer":   "d",
+      "explaination": "TThe correct answer is d. Traffic laws are in place to promote safety, order and a common understanding."
+    },
+    {
+      "_id":      2,
+      "question": "According to recent changes in traffic laws:",
+      "answer":   "a",
+      "explaination": "The correct answer is a. Sorry, kids. In 2014, a law was passed to prohibit drivers under the age of 18 from using any kind of text-based communications device, including those that are hands-free."
+    }
+  ]
+}

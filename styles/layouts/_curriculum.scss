@@ -1,0 +1,59 @@
+.l-curriculum {
+  @extend .container;
+  main {
+    @extend .row;
+    margin-bottom: 50px;
+    article {
+      @extend .col-md-12;
+      h1 {
+        @extend .text-center;
+        font-size: $font_large;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      p {
+        padding-bottom: 20px;
+      }
+      .stat-sources {
+        font-size: .75em;
+        margin: 0;
+        line-height: 0;
+      }
+      .article-image {
+        @extend .img-responsive;
+        margin-bottom: 20px;
+      }
+      .article-image-sm {
+        max-width: 200px;
+        margin-bottom: 20px;
+        display: block;
+      }
+      .clipart {
+        @extend .img-circle;
+        max-width: 200px;
+        display: block;
+      }
+      form.quiz {
+        p span {
+          font-weight: 800;
+          color: #337ab7;
+        }
+        button {
+          @extend .btn, .btn-primary, .btn-lg;
+        }
+        label {
+          margin-left: 40px;
+          vertical-align: middle;
+          span {
+            font-weight: 800;
+            color: #337ab7;
+            margin-left: 20px;
+          }
+          input[type='radio'] {
+
+          }
+        }
+      }
+    }
+  }
+}

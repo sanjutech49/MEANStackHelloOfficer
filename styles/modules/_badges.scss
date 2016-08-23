@@ -1,0 +1,30 @@
+@mixin badgeVariant ($color, $bgColor, $hover, $radius) {
+	width: 150px;
+	height: 150px;
+	background-color: $bgColor;
+	color: $color;
+	border-radius: $radius;
+	box-shadow: $box_shadow;
+	text-align: center;
+	padding: 10px;
+	font-size: $font_medium;
+	font-weight: $font_light;
+	line-height: 1;
+	transition: all .5s ease-in-out;
+	&:hover {
+		background-color: $hover;
+		color: $bgColor;
+		transform: scale(1.02);
+		box-shadow: $raised_shadow;
+		cursor: default;
+	}
+	i {
+		font-size: $font_large;
+	}
+}
+
+.badge_primary {
+	@include badgeVariant( $brand_primary, $white, $brand_primary_dark, 80px );
+}
+
+

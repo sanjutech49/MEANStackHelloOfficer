@@ -1,0 +1,114 @@
+<!doctype html>
+<html id="ng-app" ng-app="myApp" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="description" content="California's best traffic violator school."/>
+
+    <meta http-equiv="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+
+    <title>Hello Officer - Traffic Violator School</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/bootstrap-datepicker3.css">
+    <script type="text/javascript" src="/js/lib/moment.js"></script>
+
+  </head>
+
+  <body>
+
+    <div ng-controller="AppCtrl">
+      <div id="View" ng-view></div>
+    </div>
+
+<!--
+ChatBox
+<div ng-controller="ChatBoxCtrl" style="display: none">
+   <div class="chatboxlive" ng-hide="HideChatBox">
+         <div>
+            <a href="#" ng-click="CloseChatBox()" class="boxclose"></a>
+     header part
+            <div id="chatBoxheader">
+                 <div class="chatTitle">Live Chat Box</div>
+                 <div class="openChatInNewWindow">
+                    <a href="#" title="Open in a Separate Window" ng-click="CloseChatBox()">
+                        <img align="right" alt="Open in a New Window" src="/images/livechat/new-window.gif" class="image">
+                    </a>
+                 </div>
+            </div>
+            header part end
+             message part
+             <div id="chat-message">
+
+                   <div class="my-messasge" ng-show="me">
+                       <% message %>
+                   </div>
+                   <div class="response-message" ng-show="!me">
+                       <% message %>
+                   </div>
+
+             </div>
+               message part end
+               chat controls
+              <div id="chat-controls">
+                    <div class="send-message">
+                       <form  ng-submit='publish()'>
+                          <input type="text" placeholder="Enter Message Here" autocomplete="off" class="msg" ng-model='newMessage' id="msg" style="width:68%" />
+                          <input type="submit" value="Send" style="height:29px" />
+                        </form>
+                          <br class="clear">
+                    </div>
+              </div>
+      chat controls end
+        </div>
+   </div>
+</div>
+ChatBox End -->
+
+
+
+<!-- Include script files -->
+
+    <!--  pubnub files for live chat -->
+   <!--  <script src="/livechat/pubnub.min.js" type="text/javascript"></script>
+    <script src="/livechat/pubnub-crypto.min.js" type="text/javascript"></script> -->
+    <!-- end -->
+    <script src="/js/lib/angular/angular.js" type="text/javascript"></script>
+    <!--  pubnub file for live chat -->
+   <!--  <script src="/livechat/pubnub-angular.js" type="text/javascript"></script> -->
+    <!-- end -->
+    <script src="/js/lib/angular/angular-moment.min.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo-nRohCtTLS52lo9igl18_OBR3br1ITE&libraries=places">
+    </script>
+
+
+
+    <script src="/js/app.js" type="text/javascript"></script>
+    <script src="/js/services/user.js" type="text/javascript"></script>
+    <script src="/js/services/quiz.js" type="text/javascript"></script>
+    <script src="/js/controllers/preLogin.js" type="text/javascript"></script>
+    <script src="/js/controllers/myClass.js" type="text/javascript"></script>
+    <script src="/js/filters.js" type="text/javascript"></script>
+    <script src="/js/directives.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="//localhost:3000/livereload.js" type="text/javascript"></script>
+    <script src="/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXXX-X', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+<!-- Script files area end -->
+
+
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "title":      "Defensive Driving",
+  "section":    "Section VI",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "Before setting off on a road trip, it is best to:",
+      "answer":   "c",
+      "explaination": "The correct answer is c.  Before setting off on a trip, it is most important to check the traffic and road conditions along your route in order to plan around any accidents, unexpected weather changes or road closures."
+    },
+    {
+      "_id":      2,
+      "question": "You should allow more than 3 seconds between you and the vehicle in front of you when:",
+      "answer":   "d",
+      "explaination": "The correct answer is d. The point of leaving space between yourself and other vehicles is to have enough time to stop safely without causing a collision in case something unexpected happens."
+    },
+    {
+      "_id":      3,
+      "question": "In general, you are legally required to turn your headlights on 30 minutes after sunset and continue to use them while driving until 30 minutes prior to sunrise.",
+      "answer":   true,
+      "explaination": "The correct answer is a.  This statement is true, as your headlights help to illuminate the road while it is dark.  Thirty minutes after sunset continuing to 30 minutes prior to sunrise is the general legal requirement."
+    }
+  ]
+}

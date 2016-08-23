@@ -1,0 +1,24 @@
+{
+  "title":      "The Road",
+  "section":    "Section XI",
+  "questions": [
+    {
+      "_id":      1,
+      "question": "Motorists should:",
+      "answer":   "b",
+      "explaination": "The correct answer is b.  Bike lanes should be treated like any other traffic lane."
+    },
+    {
+      "_id":      2,
+      "question": "When passing other vehicles on the road:",
+      "answer":   "d",
+      "explaination": "The correct answer is d.  It is legal to pass other vehicles on the road, but you should make certain you have enough space and avoid passing in any uncertain or risky situations."
+    },
+    {
+      "_id":      3,
+      "question": "If a signal warns of an approaching train or if a train is visible or audible, you must stop at least:",
+      "answer":   "c",
+      "explaination": "The correct answer is c.  When dealing with an approaching train, you have to stop at least 15 feet from the railroad crossing for optimum safety."
+    }
+  ]
+}

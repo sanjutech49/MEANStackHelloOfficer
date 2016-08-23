@@ -1,0 +1,49 @@
+<div ng-controller="TableOfContentsController">
+
+        <h1 class="text--center">Table of Contents</h1>
+        <hr>
+
+        <ol class="table-of-contents">
+          <li class="list--inline"><span class="index">i.</span> <span class="context">Introduction</span></li>
+
+          <li class="list--inline" ng-hide="chapters['i']"><span class="index">I.</span> <span class="context">Recent Changes/Reasons for Traffic Laws</span></li>
+          <li class="list--inline" ng-show="chapters['i']"><span class="index">I.</span> <span class="context"><a href="<% route.i %>">Recent Changes/Reasons for Traffic Laws</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['ii']"><span class="index">II.</span> <span class="context">Careless Driving and its Consequences</span></li>
+          <li class="list--inline" ng-show="chapters['ii']"><span class="index">II.</span> <span class="context"><a href="<% route.ii %>">Careless Driving and its Consequences</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['iii']"><span class="index">III.</span> <span class="context">Operator Responsibilities</span></li>
+          <li class="list--inline" ng-show="chapters['iii']"><span class="index">III.</span><a href="<% route.iii %>">Operator Responsibilities</a></li>
+
+          <li class="list--inline" ng-hide="chapters['iv']"><span class="index">IV.</span> <span class="context">Rights and Responsibilities of a Pedestrian</span></li>
+          <li class="list--inline" ng-show="chapters['iv']"><span class="index">IV.</span> <span class="context"><a href="<% route.iv %>">Rights and Responsibilities of a Pedestrian</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['v']"><span class="index">V.</span> <span class="context">Driving Maneuvers</span></li>
+          <li class="list--inline" ng-show="chapters['v']"><span class="index">V.</span> <span class="context"><a href="<% route.v %>">Driving Maneuvers</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['vi']"><span class="index">VI.</span> <span class="context">Defensive Driving</span></li>
+          <li class="list--inline" ng-show="chapters['vi']"><span class="index">VI.</span> <span class="context"><a href="<% route.vi %>">Defensive Driving</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['vii']"><span class="index">VII.</span> <span class="context">Collision Avoidance</span></li>
+          <li class="list--inline" ng-show="chapters['vii']"><span class="index">VII.</span> <span class="context"><a href="<% route.vii %>">Collision Avoidance</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['viii']"><span class="index">VIII.</span> <span class="context">Road Rage/Aggressive Driving and Avoiding It</span></li>
+          <li class="list--inline" ng-show="chapters['viii']"><span class="index">VIII.</span> <span class="context"><a href="<% route.viii %>">Road Rage/Aggressive Driving and Avoiding It</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['ix']"><span class="index">IX.</span> <span class="context">Driver Distractions</span></li>
+          <li class="list--inline" ng-show="chapters['ix']"><span class="index">IX.</span> <span class="context"><a href="<% route.ix %>">Driver Distractions</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['x']"><span class="index">X.</span> <span class="context">The Vehicle</span></li>
+          <li class="list--inline" ng-show="chapters['x']"><span class="index">X.</span> <span class="context"><a href="<% route.x %>">The Vehicle</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['xi']"><span class="index">XI.</span> <span class="context">The Road</span></li>
+          <li class="list--inline" ng-show="chapters['xi']"><span class="index">XI.</span> <span class="context"><a href="<% route.xi %>">The Road</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['xii']"><span class="index">XII.</span> <span class="context">Final Exam</span></li>
+          <li class="list--inline" ng-show="chapters['xii']"><span class="index">XII.</span> <span class="context"><a href="<% route.xii %>">Final Exam</a></span></li>
+
+          <li class="list--inline" ng-hide="chapters['xiii']"><span class="index">XIII.</span> <span class="context">Course Evaluation</span></li>
+          <li class="list--inline" ng-show="chapters['xiii']"><span class="index">XIII.</span> <span class="context"><a href="<% route.xiii %>">Course Evaluation</a></span></li>
+
+        </ol>
+</div>

@@ -1,0 +1,57 @@
+{{>header}}
+<main role="article">
+  <article role="list">
+
+    <div class="container padding__top--50 padding__bottom--50">
+      <div class="row">
+        <div class="col-md-12">
+
+          <header>
+            <h1 class="text-center">Log In</h1>
+          </header>
+
+          <hr>
+
+          <h3 class="text-center">For any issues or questions about the course, contact us via mail, telephone or email.</h3>
+
+          <div class="row padding__top--50 padding__bottom--50">
+            <div class="col-md-6 col-md-offset-3">
+              <form>
+
+                <div class="auth_message auth_show" ng-show="error">
+                  <p class="bg-danger">Your credentials do not match our records.</p>
+                </div>
+
+                <fieldset>
+                  <div class="form-group">
+                    <label for="email" class="sr-only">Enter Username:</label>
+                    <input ng-model="email" type="email" id="email" value="" placeholder="username" required nt-focus>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="sr-only">Enter Password:</label>
+                    <input ng-model="password" type="password" id="password" value="" placeholder="password" required>
+                  </div>
+                  <div class="form-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Keep me logged in
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <a href="/reset-password">Forgot your password?</a>
+                  </div>
+                </fieldset>
+                <div class="form-group">
+                  <button ng-click="login()" type="submit" class="btn primary wider">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+{{>footer}}

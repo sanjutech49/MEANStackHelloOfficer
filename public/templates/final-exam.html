@@ -1,0 +1,106 @@
+
+    <main role="article">
+      <article ng-controller="QuizController">
+       <div id="timer-div" class="alert alert-warning" ng-show="!review && !isCompleted && !WhatNext">
+          <% FinalExamTimer %>
+       </div>
+        <h1 class="text-center"><% quiz.title %></h1>
+        <hr>
+        <!-- USE THIS IF PASSED -->
+
+
+
+
+        <div ng-show="isCompleted" id="passedQuiz" class="text-center">
+          <p class="h3"><% successMessage %></p>
+          <button class="btn primary base" ng-click="$parent.next()">Continue</button>
+        </div>
+
+        <!-- END OF PASSED QUIZ MESSAGE -->
+
+        <div id="reviewSection" ng-show="!review && !isCompleted && !WhatNext">
+          <form ng-show="!done" class="quiz">
+            <div ng-repeat="ques in quiz.questions">
+
+                <p><span class="text__index--num"><% $index+1 %>.</span> <% ques.question %></p>
+
+                <div ng-repeat="ans in ques.answer">
+                  <div class="radio" ng-init="ans.question=$parent.$index">
+                    <label>
+                      <input type="radio" ng-model="ques.selectedAnswer" name="selected<%ques.source%>" ng-value="ans">
+                      <span><% indexChar($index) %>.</span>
+                      <% ans.answer %>
+                    </label>
+                  </div>
+                </div>
+
+            </div>
+            <button ng-click="submitQuiz()" id="submit-final-exam" class="btn primary base">Submit Final Exam</button>
+          </form>
+          <form ng-show="done">
+              <h2><% security.question %></h2>
+              <ul ng-repeat="a in security.answers">
+                <li>
+                    <div class="options">
+                      <label>
+                        <input type="radio" name="securityQuestions" ng-value="a" ng-model="security.selected">
+                        <span class="option_item"> <%a%></span>
+                      </label>
+                    </div>
+                </li>
+              </ul>
+              <button ng-click="submit()" class="btn primary base">Submit</button>
+          </form>
+        </div>
+
+
+              <div ng-show="review && !isCompleted && !WhatNext">
+                <p class="text--light text--medium text--center">Oops! Unfortunately you did not answer at least 20 questions correctly.</p>
+                <form class="quiz">
+                  <div ng-repeat="ques in AllAns">
+                    <div class="questionContainer">
+                      <p><span class="text__index--num"><% $index+1 %>.</span> <% ques.question %></p>
+                      <ul>
+                        <li class="radio" ng-repeat="ans in ques.answer" >
+                          <span ng-init="ans.question=$parent.$index">
+                            <i class="fa fa-check icon--pass" ng-show="IsCorrectAnswer(ans._id)"></i>
+                            <i class="fa fa-times icon--error" ng-show="showYellowIfwrong(ans._id)"></i>
+                            <!-- <i class="fa fa-times icon--error" ng-show="showYellowIfwrong(ans._id)"></i> -->
+                            <!-- <span ng-show="!IsCorrectAnswer(ans._id) && !showYellowIfwrong(ans._id)">
+                            &nbsp;
+                            </span> -->
+                            <span class="text__index--char"><% indexChar($index) %>.</span> <% ans.answer %>
+                          </span>
+                        </li>
+                        <li>
+                          <div class="explaination">
+                            <p class="text-danger"><% ques.explanation %></p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <br>
+                    <button ng-show="tryAlternateExamBtn" ng-click="tryAlternateFinalExam()" class="btn primary base">Try Alternate Exam</button>
+                    <button ng-click="whatsNext()" ng-show="!tryAlternateExamBtn" class="btn primary base">What's Next</button>
+
+                </form>
+              </div>
+
+
+
+        <div ng-show='WhatNext'>
+           <div class="alert alert-danger" ng-show="!EndFinal">
+               We are very sorry but you have failed both versions of the final exam.  You cannot receive your certificate.  If you have enough time, you can try again by retaking the course.  Best of luck!
+           </div>
+           <div class="alert alert-danger" ng-show='EndFinal'>
+               We're sorry. You have failed both attempts at the final exam. You will not be able to get your certificate. You have the option to take our course again.
+           </div>
+           <br/>
+           <a href="/logout" class="btn primary base">Retake Course</a>
+        </div>
+
+      </article>
+    </main>
+

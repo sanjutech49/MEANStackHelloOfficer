@@ -1,0 +1,32 @@
+.questions {
+    padding-left: 15px;
+
+    strong.index {
+        color: $brand_primary;
+    }
+
+    p.item {
+        font-size: $font_base + 4;
+    }
+
+    .options {
+        @extend .radio;
+
+        label {
+            display: block;
+            input[type="radio"] {
+                  margin: 9px 0px 0px -15px;
+            }
+            span.option_item {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.question {
+    margin-bottom: 30px;
+    p {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,423 @@
+{{>header}}
+<main role="article">
+  <article role="list">
+
+    <div class="container padding__top--50 padding__bottom--50">
+
+        <h1 class="text--center">Security Questions</h1>
+        <hr>
+
+        <section>
+          <div class="container section">
+            <div class="row">
+
+              <div class="wizaed text-center">
+                    <a class="completed">Sign Up</a>
+                    <a class="current">Security Questions</a>
+                    <a class="disabled">Course</a>
+                    <a class="disabled">Payment</a>
+                    <a class="disabled">Test</a>
+                    <a class="disabled">Certificate</a>
+                </div>
+
+              <div class="col-md-6 col-md-offset-3">
+
+                <form>
+                  <fieldset>
+
+                    <div class="form-group">
+                      <p>
+                        <strong class="index">1.</strong>
+                        <span ng-model="security_questions[0].question"><% security_questions[0].question %></span>
+                      </p>
+
+
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="index-1" value="brown" ng-model="security_questions[0].answer">
+                            <span class="option_item"> <strong>a.</strong> Brown</span>
+                          </label>
+                        </div>
+
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="index-1" value="blue" ng-model="security_questions[0].answer">
+                            <span class="option_item"> <strong>b.</strong> Blue</span></label>
+                          </label>
+                        </div>
+
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="index-1" value="green" ng-model="security_questions[0].answer">
+                            <span class="option_item"> <strong>c.</strong> Green</span></label>
+                          </label>
+                        </div>
+
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="index-1" value="hazel" ng-model="security_questions[0].answer">
+                            <span class="option_item"> <strong>d.</strong> Hazel</span></label>
+                          </label>
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-group">
+                      <p>
+                        <strong class="index">2.</strong>
+                        <span ng-mode="security_questions[1].question"><%security_questions[1].question%><span>
+                      </p>
+
+
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-2" value="circle" ng-model="security_questions[1].answer">
+                                <span class="option_item"> <strong>a.</strong> Circle</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-2" value="square" ng-model="security_questions[1].answer">
+                                <span class="option_item"> <strong>b.</strong> Square</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-2" value="rectangle" ng-model="security_questions[1].answer">
+                                <span class="option_item"> <strong>c.</strong> Rectangle</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-2" value="triangle" ng-model="security_questions[1].answer">
+                              <span class="option_item"> <strong>d.</strong> Triangle</span>
+                            </label>
+                          </div>
+
+                    </div>
+
+                    <div class="form-group">
+                      <p>
+                        <strong class="index">3.</strong>
+                        <span ng-model="security_questions[2].question"><%security_questions[2].question%></span>
+                      </p>
+
+
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-3" value="river" ng-model="security_questions[2].answer">
+                              <span class="option_item"> <strong>a.</strong> River</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-3" value="ocean" ng-model="security_questions[2].answer">
+                              <span class="option_item"> <strong>b.</strong> Ocean</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-3" value="bathtub" ng-model="security_questions[2].answer">
+                              <span class="option_item"> <strong>c.</strong> Bathtub</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-3" value="lake" ng-model="security_questions[2].answer">
+                              <span class="option_item"><strong>d.</strong> Lake</span>
+                            </label>
+                          </div>
+
+                    </div>
+
+                    <div class="form-group">
+                      <p>
+                        <strong class="index">4.</strong>
+                        <span ng-model="security_questions[4].question"><%security_questions[3].question%></span>
+                      </p>
+
+
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-5" value="snake" ng-model="security_questions[3].answer">
+                              <span class="option_item"> <strong>a.</strong> Snake</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-5" value="tiger" ng-model="security_questions[3].answer">
+                              <span class="option_item"> <strong>b.</strong> Tiger</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-5" value="squirrel" ng-model="security_questions[3].answer">
+                              <span class="option_item"> <strong>c.</strong> Squirrel</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-5" value="wolf" ng-model="security_questions[3].answer">
+                              <span class="option_item"> <strong>d.</strong> Wolf</span>
+                            </label>
+                          </div>
+
+                    </div>
+
+                    <div class="form-group">
+                      <p>
+                        <strong class="index">5.</strong>
+                        <span ng-model="security_questions[5].question"><%security_questions[4].question%></span>
+                      </p>
+
+
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-6" value="horror" ng-model="security_questions[4].answer">
+                              <span class="option_item"> <strong>a.</strong> Horror</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-6" value="drama" ng-model="security_questions[4].answer">
+                              <span class="option_item"> <strong>b.</strong> Drama</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-6" value="independent" ng-model="security_questions[4].answer">
+                              <span class="option_item"> <strong>c.</strong> Independent</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-6" value="comedy" ng-model="security_questions[4].answer">
+                              <span class="option_item"> <strong>d.</strong> Comedy</span>
+                            </label>
+                          </div>
+
+                    </div>
+
+                    <div class="form-group">
+                      <p>
+                        <strong class="index">6.</strong>
+                        <span ng-model="security_questions[6]"><%security_questions[5].question%></span>
+                      </p>
+
+
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-7" value="one" ng-model="security_questions[5].answer">
+                              <span class="option_item"> <strong>a.</strong> One</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-7" value="two" ng-model="security_questions[5].answer">
+                              <span class="option_item"> <strong>b.</strong> Two</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-7" value="zero" ng-model="security_questions[5].answer">
+                              <span class="option_item"> <strong>c.</strong> Zero</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-7" value="none of the above" ng-model="security_questions[5].answer">
+                              <span class="option_item"> <strong>d.</strong> None of the above</span>
+                            </label>
+                          </div>
+
+                    </div>
+
+                    <div class="form-group">
+                      <p>
+                        <strong class="index">7.</strong>
+                        <span ng-model="security_questions[7].questions"><%security_questions[6].question%></span>
+                      </p>
+
+
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-8" value="dancing" ng-model="security_questions[6].answer">
+                              <span class="option_item"><strong>a.</strong> Dancing</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-8" value="swimming" ng-model="security_questions[6].answer">
+                              <span class="option_item"> <strong>b.</strong> Swimming</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-8" value="writing" ng-model="security_questions[6].answer">
+                              <span class="option_item"> <strong>c.</strong> Writing</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-8" value="singing" ng-model="security_questions[6].answer">
+                              <span class="option_item"> <strong>d.</strong> Singing</span>
+                            </label>
+                          </div>
+
+                    </div>
+
+                    <div class="form-group">
+                      <p>
+                        <strong class="index">8.</strong>
+                        <span ng-model="security_questions[8].question"><%security_questions[7].question%></span>
+                      </p>
+
+
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-9" value="chocolate" ng-model="security_questions[7].answer">
+                              <span class="option_item"> <strong>a.</strong> Chocolate</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-9" value="pasta" ng-model="security_questions[7].answer">
+                              <span class="option_item"> <strong>b.</strong> Pasta</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-9" value="watermelon" ng-model="security_questions[7].answer">
+                              <span class="option_item"> <strong>c.</strong> Watermelon</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-9" value="salad" ng-model="security_questions[7].answer">
+                              <span class="option_item"> <strong>d.</strong> Salad</span>
+                            </label>
+                          </div>
+
+                    </div>
+
+                    <div class="form-group">
+                      <p>
+                        <strong class="index">9.</strong>
+                        <span ng-model="security_questions[9].question"><%security_questions[8].question%></span>
+                      </p>
+
+
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-10" value="red" ng-model="security_questions[8].answer">
+                              <span class="option_item"> <strong>a.</strong> Red</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-10" value="blonde" ng-model="security_questions[8].answer">
+                              <span class="option_item"> <strong>b.</strong> Blonde</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-10" value="black" ng-model="security_questions[8].answer">
+                              <span class="option_item"> <strong>c.</strong> Black</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-10" value="brown" ng-model="security_questions[8].answer">
+                              <span class="option_item"> <strong>d.</strong> Brown</span>
+                            </label>
+                          </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                      <p>
+                        <strong class="index">10.</strong>
+                        <span ng-model="security_questions[9].question"><%security_questions[9].question%></span>
+                      </p>
+
+
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-11" value="yes, always" ng-model="security_questions[9].answer">
+                              <span class="option_item"> <strong>a.</strong> Yes, always</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-11" value="no, never" ng-model="security_questions[9].answer">
+                              <span class="option_item"> <strong>b.</strong> No, never</span>
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="index-11" value="sometimes" ng-model="security_questions[9].answer">
+                              <span class="option_item"> <strong>c.</strong> Sometimes</span>
+                            </label>
+                          </div>
+
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" ng-model="confirmCitation">  I do attest under penalty of perjury that I am the student that received the citation and the one who will be completing this course, and that all the information I have provided is true. <br><br>Periodically during the course, I may be asked security questions based on the information given above, to verify that I am the actual person taking the course.
+                        </label>
+                      </div>
+                    </div>
+
+
+                    <button ng-click="submit()" type="submit" class="btn primary wider">Start Course</button>
+                  </fieldset>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+  </article>
+</main>
+{{>footer}}
